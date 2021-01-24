@@ -11,6 +11,7 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+   
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="GameDate" class="control-label"></label>
@@ -19,8 +20,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player1Name" class="control-label"></label>
-                <input asp-for="Player1Name" class="form-control" />
-                <span asp-validation-for="Player1Name" class="text-danger"></span>
+                @*<input asp-for="Player1Name" class="form-control" />*@
+                @Html.DropDownList("PlayerId", new SelectList(ViewBag.AllPlayers, "PlayerId", "PlayerName"));
+                @*<span asp-validation-for="Player1Name" class="text-danger"></span>*@
             </div>
             <div class="form-group">
                 <label asp-for="Player2Name" class="control-label"></label>

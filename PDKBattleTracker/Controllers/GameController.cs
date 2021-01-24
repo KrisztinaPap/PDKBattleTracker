@@ -21,8 +21,44 @@ namespace PDKBattleTracker.Controllers
         // GET: Game
         public async Task<IActionResult> Index()
         {
+            List<SelectListItem> playerlist = new List<SelectListItem>();
+
+            foreach (Player player in _context.Players)
+            {
+                SelectListItem item = new SelectListItem();
+                item.Value = player.PlayerId.ToString();
+                item.Text = player.PlayerName.ToString();
+                playerlist.Add(item);
+            }
+
+            //playerlist.Insert(0, new Player { PlayerId = 0, PlayerName = "--- select player ---" });
+
+            ViewBag.AllPlayers = playerlist;
+
             return View(await _context.Games.ToListAsync());
         }
+
+        //[HttpPost]
+        //public IActionResult Index(Player Player)
+        //{
+        //    if (Player.PlayerId == 0)
+        //    {
+        //        ModelState.AddModelError("", "Select Player");
+        //    }
+
+        //    int SelectValue = Player.PlayerId;
+
+        //    ViewBag.SelectedValue = Player.PlayerId;
+
+        //    List<Player> playerlist = new List<Models.Player>();
+
+        //    playerlist = (from player in _context.Players select player).ToList();
+
+        //    ViewBag.AllPlayers = playerlist;
+
+        //    return View();
+        //}
+
 
         // GET: Game/Details/5
         public async Task<IActionResult> Details(int? id)
