@@ -10,8 +10,8 @@ using PDKBattleTracker.Models;
 namespace PDKBattleTracker.Migrations
 {
     [DbContext(typeof(PDKBattleTrackerContext))]
-    [Migration("20210124013056_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210124015625_NewMigration")]
+    partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,10 +43,15 @@ namespace PDKBattleTracker.Migrations
                     b.Property<int>("Player2Score")
                         .HasColumnType("int");
 
+                    b.Property<int>("PlayerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Winner")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("GameId");
+
+                    b.HasIndex("PlayerId");
 
                     b.ToTable("Games");
                 });
@@ -58,9 +63,6 @@ namespace PDKBattleTracker.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("GameId")
-                        .HasColumnType("int");
-
                     b.Property<string>("PlayerName")
                         .HasColumnType("nvarchar(max)");
 
@@ -69,25 +71,23 @@ namespace PDKBattleTracker.Migrations
 
                     b.HasKey("PlayerId");
 
-                    b.HasIndex("GameId");
-
                     b.ToTable("Players");
-                });
-
-            modelBuilder.Entity("PDKBattleTracker.Models.Player", b =>
-                {
-                    b.HasOne("PDKBattleTracker.Models.Game", "Game")
-                        .WithMany("Players")
-                        .HasForeignKey("GameId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Game");
                 });
 
             modelBuilder.Entity("PDKBattleTracker.Models.Game", b =>
                 {
-                    b.Navigation("Players");
+                    b.HasOne("PDKBattleTracker.Models.Player", "Player")
+                        .WithMany("Game")
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("PDKBattleTracker.Models.Player", b =>
+                {
+                    b.Navigation("Game");
                 });
 #pragma warning restore 612, 618
         }

@@ -21,8 +21,7 @@ namespace PDKBattleTracker.Controllers
         // GET: Player
         public async Task<IActionResult> Index()
         {
-            var pDKBattleTrackerContext = _context.Players.Include(p => p.Game);
-            return View(await pDKBattleTrackerContext.ToListAsync());
+            return View(await _context.Players.ToListAsync());
         }
 
         // GET: Player/Details/5
@@ -34,7 +33,6 @@ namespace PDKBattleTracker.Controllers
             }
 
             var player = await _context.Players
-                .Include(p => p.Game)
                 .FirstOrDefaultAsync(m => m.PlayerId == id);
             if (player == null)
             {
@@ -47,7 +45,6 @@ namespace PDKBattleTracker.Controllers
         // GET: Player/Create
         public IActionResult Create()
         {
-            ViewData["GameId"] = new SelectList(_context.Games, "GameId", "GameId");
             return View();
         }
 
@@ -56,7 +53,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PlayerId,PlayerName,PlayerTotalScore,GameId")] Player player)
+        public async Task<IActionResult> Create([Bind("PlayerId,PlayerName,PlayerTotalScore")] Player player)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +61,6 @@ namespace PDKBattleTracker.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GameId"] = new SelectList(_context.Games, "GameId", "GameId", player.GameId);
             return View(player);
         }
 
@@ -81,7 +77,6 @@ namespace PDKBattleTracker.Controllers
             {
                 return NotFound();
             }
-            ViewData["GameId"] = new SelectList(_context.Games, "GameId", "GameId", player.GameId);
             return View(player);
         }
 
@@ -90,7 +85,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PlayerId,PlayerName,PlayerTotalScore,GameId")] Player player)
+        public async Task<IActionResult> Edit(int id, [Bind("PlayerId,PlayerName,PlayerTotalScore")] Player player)
         {
             if (id != player.PlayerId)
             {
@@ -117,7 +112,6 @@ namespace PDKBattleTracker.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GameId"] = new SelectList(_context.Games, "GameId", "GameId", player.GameId);
             return View(player);
         }
 
@@ -130,7 +124,6 @@ namespace PDKBattleTracker.Controllers
             }
 
             var player = await _context.Players
-                .Include(p => p.Game)
                 .FirstOrDefaultAsync(m => m.PlayerId == id);
             if (player == null)
             {

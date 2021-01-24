@@ -47,6 +47,12 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Winner)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Player)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Player.PlayerId)
+        </dd class>
     </dl>
     
     <form asp-action="Delete">

@@ -18,9 +18,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.PlayerTotalScore)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Game)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -32,9 +29,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PlayerTotalScore)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Game.GameId)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PlayerId">Edit</a> |
