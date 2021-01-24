@@ -10,8 +10,6 @@ namespace PDKBattleTracker.Models
     {
         public int GameId { get; set; }
         public DateTime GameDate { get; set; }
-        public Player Player1 { get; set; }
-        public Player Player2 { get; set; }
         public string Player1Faction { get; set; }
         public string Player2Faction { get; set; }
         public int Player1Score { get; set; }
