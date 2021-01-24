@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PDKBattleTracker.Models;
 
 namespace PDKBattleTracker.Migrations
 {
     [DbContext(typeof(PDKBattleTrackerContext))]
-    partial class PDKBattleTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210124021936_UpdatedDatabaseWithPlayerNameInsteadOfId")]
+    partial class UpdatedDatabaseWithPlayerNameInsteadOfId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,16 +34,10 @@ namespace PDKBattleTracker.Migrations
                     b.Property<string>("Player1Faction")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Player1Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Player1Score")
                         .HasColumnType("int");
 
                     b.Property<string>("Player2Faction")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Player2Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Player2Score")

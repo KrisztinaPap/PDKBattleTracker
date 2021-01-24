@@ -56,7 +56,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId")] Game game)
+        public async Task<IActionResult> Create([Bind("GameId,GameDate,PlayerName, Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace PDKBattleTracker.Controllers
             {
                 return NotFound();
             }
-            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
+            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
             return View(game);
         }
 
@@ -117,7 +117,7 @@ namespace PDKBattleTracker.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
+            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
             return View(game);
         }
 
