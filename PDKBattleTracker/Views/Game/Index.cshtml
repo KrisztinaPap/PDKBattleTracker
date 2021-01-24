@@ -16,6 +16,12 @@
                 @Html.DisplayNameFor(model => model.GameDate)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Player1Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player2Name)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Player1Faction)
             </th>
             <th>
@@ -31,6 +37,9 @@
                 @Html.DisplayNameFor(model => model.Winner)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.PlayerName)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Player)
             </th>
             <th></th>
@@ -41,6 +50,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.GameDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player1Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player2Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Player1Faction)
@@ -56,6 +71,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Winner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Player.PlayerId)

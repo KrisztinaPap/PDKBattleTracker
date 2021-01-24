@@ -10,8 +10,8 @@ using PDKBattleTracker.Models;
 namespace PDKBattleTracker.Migrations
 {
     [DbContext(typeof(PDKBattleTrackerContext))]
-    [Migration("20210124015625_NewMigration")]
-    partial class NewMigration
+    [Migration("20210124180359_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,10 +34,16 @@ namespace PDKBattleTracker.Migrations
                     b.Property<string>("Player1Faction")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Player1Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Player1Score")
                         .HasColumnType("int");
 
                     b.Property<string>("Player2Faction")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Player2Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Player2Score")
@@ -45,6 +51,9 @@ namespace PDKBattleTracker.Migrations
 
                     b.Property<int>("PlayerId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PlayerName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Winner")
                         .HasColumnType("nvarchar(max)");

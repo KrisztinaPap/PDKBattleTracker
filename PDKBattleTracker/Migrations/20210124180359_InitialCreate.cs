@@ -28,12 +28,15 @@ namespace PDKBattleTracker.Migrations
                     GameId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     GameDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Player1Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Player2Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Player1Faction = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Player2Faction = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Player1Score = table.Column<int>(type: "int", nullable: false),
                     Player2Score = table.Column<int>(type: "int", nullable: false),
                     Winner = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PlayerId = table.Column<int>(type: "int", nullable: false)
+                    PlayerId = table.Column<int>(type: "int", nullable: false),
+                    PlayerName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -47,7 +47,7 @@ namespace PDKBattleTracker.Controllers
         // GET: Game/Create
         public IActionResult Create()
         {
-            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName");
+            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GameId,GameDate,PlayerName, Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId")] Game game)
+        public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId,PlayerName")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace PDKBattleTracker.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
+            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
             return View(game);
         }
 
@@ -81,7 +81,7 @@ namespace PDKBattleTracker.Controllers
             {
                 return NotFound();
             }
-            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
+            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
             return View(game);
         }
 
@@ -90,7 +90,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GameId,GameDate,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId")] Game game)
+        public async Task<IActionResult> Edit(int id, [Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner,PlayerId,PlayerName")] Game game)
         {
             if (id != game.GameId)
             {
@@ -117,7 +117,7 @@ namespace PDKBattleTracker.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
+            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
             return View(game);
         }
 
