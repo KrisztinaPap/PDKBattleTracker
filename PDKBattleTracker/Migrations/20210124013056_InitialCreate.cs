@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PDKBattleTracker.Migrations
 {
-    public partial class SecondMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,14 +11,14 @@ namespace PDKBattleTracker.Migrations
                 name: "Games",
                 columns: table => new
                 {
-                    GameId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    GameDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Player1Faction = table.Column<string>(type: "TEXT", nullable: true),
-                    Player2Faction = table.Column<string>(type: "TEXT", nullable: true),
-                    Player1Score = table.Column<int>(type: "INTEGER", nullable: false),
-                    Player2Score = table.Column<int>(type: "INTEGER", nullable: false),
-                    Winner = table.Column<string>(type: "TEXT", nullable: true)
+                    GameId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    GameDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Player1Faction = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Player2Faction = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Player1Score = table.Column<int>(type: "int", nullable: false),
+                    Player2Score = table.Column<int>(type: "int", nullable: false),
+                    Winner = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -29,11 +29,11 @@ namespace PDKBattleTracker.Migrations
                 name: "Players",
                 columns: table => new
                 {
-                    PlayerId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    PlayerName = table.Column<string>(type: "TEXT", nullable: true),
-                    PlayerTotalScore = table.Column<int>(type: "INTEGER", nullable: false),
-                    GameId = table.Column<int>(type: "INTEGER", nullable: false)
+                    PlayerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PlayerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PlayerTotalScore = table.Column<int>(type: "int", nullable: false),
+                    GameId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
