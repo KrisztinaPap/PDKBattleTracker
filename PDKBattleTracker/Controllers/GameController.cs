@@ -47,7 +47,7 @@ namespace PDKBattleTracker.Controllers
         // GET: Game/Create
         public IActionResult Create()
         {
-            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId");
+            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace PDKBattleTracker.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "PlayerId", game.PlayerId);
+            ViewData["PlayerName"] = new SelectList(_context.Players, "PlayerName", "PlayerName", game.PlayerName);
             return View(game);
         }
 

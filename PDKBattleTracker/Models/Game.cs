@@ -17,6 +17,7 @@ namespace PDKBattleTracker.Models
         public string Winner { get; set; }
 
         public int PlayerId { get; set; }
+        public string PlayerName { get; set; }
         public Player Player { get; set; }
     }
 }
