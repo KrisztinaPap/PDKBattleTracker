@@ -1,4 +1,5 @@
 ﻿@model PDKBattleTracker.Models.Game
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     ViewData["Title"] = "Create";
@@ -8,10 +9,20 @@
 
 <h4>Game</h4>
 <hr />
+@if(ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-   
+            <ul>
+                @foreach (var item in ViewBag.PlayerList)
+                {
+                    <li>@item.PlayerName</li>
+                }
+            </ul>
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="GameDate" class="control-label"></label>
@@ -20,8 +31,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player1Name" class="control-label"></label>
+
                 @*<input asp-for="Player1Name" class="form-control" />*@
-                @Html.DropDownList("PlayerId", new SelectList(ViewBag.AllPlayers, "PlayerId", "PlayerName"));
+                @*<div class="col-md-5">
+                <select id="Player1Name" name="PlayerId" asp-for="PlayerId" asp-items="@(new SelectList(ViewBag.PlayerList,"PlayerName","PlayerId"))" class="form-control">
+                    <option value="0">Please select Player</option>
+                </select>
+            </div>*@
                 @*<span asp-validation-for="Player1Name" class="text-danger"></span>*@
             </div>
             <div class="form-group">

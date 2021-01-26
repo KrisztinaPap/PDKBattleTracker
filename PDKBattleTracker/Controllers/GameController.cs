@@ -21,43 +21,19 @@ namespace PDKBattleTracker.Controllers
         // GET: Game
         public async Task<IActionResult> Index()
         {
-            List<SelectListItem> playerlist = new List<SelectListItem>();
-
-            foreach (Player player in _context.Players)
-            {
-                SelectListItem item = new SelectListItem();
-                item.Value = player.PlayerId.ToString();
-                item.Text = player.PlayerName.ToString();
-                playerlist.Add(item);
-            }
-
-            //playerlist.Insert(0, new Player { PlayerId = 0, PlayerName = "--- select player ---" });
-
-            ViewBag.AllPlayers = playerlist;
+            ViewBag.PlayerList = GetPlayerlist();
 
             return View(await _context.Games.ToListAsync());
         }
 
-        //[HttpPost]
-        //public IActionResult Index(Player Player)
-        //{
-        //    if (Player.PlayerId == 0)
-        //    {
-        //        ModelState.AddModelError("", "Select Player");
-        //    }
-
-        //    int SelectValue = Player.PlayerId;
-
-        //    ViewBag.SelectedValue = Player.PlayerId;
-
-        //    List<Player> playerlist = new List<Models.Player>();
-
-        //    playerlist = (from player in _context.Players select player).ToList();
-
-        //    ViewBag.AllPlayers = playerlist;
-
-        //    return View();
-        //}
+        [HttpPost]
+        public IActionResult Index(string PlayerID, string PlayerName)
+        {
+            ViewBag.Message = "PlayerId" + PlayerID;
+            ViewBag.Message += "PlayerName" + PlayerName;
+            ViewBag.PlayerList = GetPlayerlist();
+            return View();
+        }
 
 
         // GET: Game/Details/5
@@ -81,6 +57,8 @@ namespace PDKBattleTracker.Controllers
         // GET: Game/Create
         public IActionResult Create()
         {
+            ViewBag.PlayerList = GetPlayerlist();
+
             return View();
         }
 
@@ -91,6 +69,8 @@ namespace PDKBattleTracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner")] Game game)
         {
+            ViewBag.PlayerList = GetPlayerlist();
+
             if (ModelState.IsValid)
             {
                 _context.Add(game);
@@ -184,5 +164,26 @@ namespace PDKBattleTracker.Controllers
         {
             return _context.Games.Any(e => e.GameId == id);
         }
+
+        public IEnumerable<Player> GetPlayerlist() {
+
+            List<Player> tempPlayerList = new List<Player>();
+
+            tempPlayerList = (from player in _context.Players select player).ToList();
+
+            List<Player> playerList = new List<Player>();
+
+            foreach(Player player in tempPlayerList)
+            {
+                playerList.Add(new Player
+                {
+                    PlayerId = Convert.ToInt32(player.PlayerId),
+                    PlayerName = player.PlayerName.ToString()
+                });
+            }
+            Console.WriteLine(playerList);
+            return playerList;
+        }
+
     }
 }
