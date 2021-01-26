@@ -18,12 +18,6 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-            <ul>
-                @foreach (var item in ViewBag.PlayerList)
-                {
-                    <li>@item.PlayerName</li>
-                }
-            </ul>
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -36,7 +30,7 @@
             <div class="form-group">
                 <label asp-for="Player1Name" class="control-label">Player 1</label>
                 <div class="col-md-5">
-                    <select id="Player1Name" name="Player1Name" asp-for="PlayerId" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName", "Player1Name"))" class="form-control">
+                    <select id="Player1Name" name="Player1Name" asp-for="Player1Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerName", "PlayerName"))" class="form-control">
                         <option value="0">--- select player ---</option>
                     </select>
                 </div>
@@ -45,7 +39,7 @@
             <div class="form-group">
                 <label asp-for="Player2Name" class="control-label">Player 2</label>
                 <div class="col-md-5">
-                    <select id="Player2Name" name="Player2Name" asp-for="PlayerId" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName"))" class="form-control">
+                    <select id="Player2Name" name="Player2Name" asp-for="PlayerId" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerName", "PlayerName"))" class="form-control">
                         <option value="0">--- select player ---</option>
                     </select>
                 </div>
