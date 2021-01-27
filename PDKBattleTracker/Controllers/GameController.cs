@@ -72,15 +72,21 @@ namespace PDKBattleTracker.Controllers
 
             if (ModelState.IsValid)
             {
+                // Adding player 1's score to their total score
 
                 Player currentPlayer1 = new Player();
-                
                 currentPlayer1 = await _context.Players
                     .FirstOrDefaultAsync(m => m.PlayerName == game.Player1Name);
+                var updatedScore1 = currentPlayer1.PlayerTotalScore + game.Player1Score;
+                currentPlayer1.PlayerTotalScore = updatedScore1;
 
-                var updatedScore = currentPlayer1.PlayerTotalScore + game.Player1Score;
+                // Adding player 2's score to their total score
 
-                currentPlayer1.PlayerTotalScore = updatedScore;
+                Player currentPlayer2 = new Player();
+                currentPlayer2 = await _context.Players
+                    .FirstOrDefaultAsync(m => m.PlayerName == game.Player2Name);
+                var updatedScore2 = currentPlayer2.PlayerTotalScore + game.Player2Score;
+                currentPlayer2.PlayerTotalScore = updatedScore2;
 
                 _context.Add(game);
                 await _context.SaveChangesAsync();
