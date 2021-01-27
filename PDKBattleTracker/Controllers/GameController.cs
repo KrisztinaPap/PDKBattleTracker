@@ -22,14 +22,16 @@ namespace PDKBattleTracker.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.PlayerList = GetPlayerlist();
+            ViewBag.FactionList = GetFactionList();
 
             return View(await _context.Games.ToListAsync());
         }
 
         [HttpPost]
-        public IActionResult Index(string PlayerID, string PlayerName)
+        public IActionResult Index(string PlayerId, string PlayerName, string FactionId, string FactionName)
         {
             ViewBag.PlayerList = GetPlayerlist();
+            ViewBag.FactionList = GetFactionList();
 
             return View();
         }
@@ -57,6 +59,7 @@ namespace PDKBattleTracker.Controllers
         public IActionResult Create()
         {
             ViewBag.PlayerList = GetPlayerlist();
+            ViewBag.FactionList = GetFactionList();
 
             return View();
         }
@@ -69,6 +72,7 @@ namespace PDKBattleTracker.Controllers
         public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner")] Game game)
         {
             ViewBag.PlayerList = GetPlayerlist();
+            ViewBag.FactionList = GetFactionList();
 
             if (ModelState.IsValid)
             {
@@ -197,8 +201,28 @@ namespace PDKBattleTracker.Controllers
                     PlayerTotalScore = Convert.ToInt32(player.PlayerTotalScore)
                 });
             }
-            Console.WriteLine(playerList);
+     
             return playerList;
+        }
+
+        public IEnumerable<Faction> GetFactionList()
+        {
+            List<Faction> tempFactionList = new List<Faction>();
+
+            tempFactionList = (from faction in _context.Factions select faction).ToList();
+
+            List<Faction> factionList = new List<Faction>();
+
+            foreach(Faction faction in tempFactionList)
+            {
+                factionList.Add(new Faction
+                {
+                    FactionId = Convert.ToInt32(faction.FactionId),
+                    FactionName = faction.FactionName.ToString()
+                });
+            }
+
+            return factionList;
         }
 
     }
