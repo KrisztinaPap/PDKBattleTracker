@@ -28,6 +28,9 @@ namespace PDKBattleTracker.Models
         [Required]
         public string Player2Faction { get; set; }
 
+        public string Player1SubFaction { get; set; }
+        public string Player2SubFaction { get; set; }
+
         public int Player1Score { get; set; }
         public int Player2Score { get; set; }
         public string Winner { get; set; }

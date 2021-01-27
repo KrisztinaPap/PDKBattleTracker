@@ -23,15 +23,17 @@ namespace PDKBattleTracker.Controllers
         {
             ViewBag.PlayerList = GetPlayerlist();
             ViewBag.FactionList = GetFactionList();
+            ViewBag.SubFactionList = GetSubFactionList();
 
             return View(await _context.Games.ToListAsync());
         }
 
         [HttpPost]
-        public IActionResult Index(string PlayerId, string PlayerName, string FactionId, string FactionName)
+        public IActionResult Index(string PlayerId, string PlayerName, string FactionId, string FactionName, string SubFactionId, string SubFactionName)
         {
             ViewBag.PlayerList = GetPlayerlist();
             ViewBag.FactionList = GetFactionList();
+            ViewBag.SubFactionList = GetSubFactionList();
 
             return View();
         }
@@ -60,6 +62,7 @@ namespace PDKBattleTracker.Controllers
         {
             ViewBag.PlayerList = GetPlayerlist();
             ViewBag.FactionList = GetFactionList();
+            ViewBag.SubFactionList = GetSubFactionList();
 
             return View();
         }
@@ -73,6 +76,7 @@ namespace PDKBattleTracker.Controllers
         {
             ViewBag.PlayerList = GetPlayerlist();
             ViewBag.FactionList = GetFactionList();
+            ViewBag.SubFactionList = GetSubFactionList();
 
             if (ModelState.IsValid)
             {
@@ -184,6 +188,7 @@ namespace PDKBattleTracker.Controllers
             return _context.Games.Any(e => e.GameId == id);
         }
 
+        // Create the player dropdown list
         public IEnumerable<Player> GetPlayerlist() {
 
             List<Player> tempPlayerList = new List<Player>();
@@ -205,6 +210,7 @@ namespace PDKBattleTracker.Controllers
             return playerList;
         }
 
+        // Create the faction dropdown list
         public IEnumerable<Faction> GetFactionList()
         {
             List<Faction> tempFactionList = new List<Faction>();
@@ -225,5 +231,26 @@ namespace PDKBattleTracker.Controllers
             return factionList;
         }
 
+        // Create the subfaction dropdown list
+
+        public IEnumerable<SubFaction> GetSubFactionList()
+        {
+            List<SubFaction> tempSubFactionList = new List<SubFaction>();
+
+            tempSubFactionList = (from subfaction in _context.SubFactions select subfaction).ToList();
+
+            List<SubFaction> subFactionList = new List<SubFaction>();
+
+            foreach (SubFaction subfaction in tempSubFactionList)
+            {
+                subFactionList.Add(new SubFaction
+                {
+                    SubFactionId = Convert.ToInt32(subfaction.SubFactionId),
+                    SubFactionName = subfaction.SubFactionName.ToString()
+                });
+            }
+
+            return subFactionList;
+        }
     }
 }
