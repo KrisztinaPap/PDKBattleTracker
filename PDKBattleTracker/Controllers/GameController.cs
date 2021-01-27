@@ -29,9 +29,8 @@ namespace PDKBattleTracker.Controllers
         [HttpPost]
         public IActionResult Index(string PlayerID, string PlayerName)
         {
-            ViewBag.Message = "PlayerId" + PlayerID;
-            ViewBag.Message += "PlayerName" + PlayerName;
             ViewBag.PlayerList = GetPlayerlist();
+
             return View();
         }
 
@@ -178,7 +177,8 @@ namespace PDKBattleTracker.Controllers
                 playerList.Add(new Player
                 {
                     PlayerId = Convert.ToInt32(player.PlayerId),
-                    PlayerName = player.PlayerName.ToString()
+                    PlayerName = player.PlayerName.ToString(),
+                    PlayerTotalScore = Convert.ToInt32(player.PlayerTotalScore)
                 });
             }
             Console.WriteLine(playerList);
