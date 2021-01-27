@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace PDKBattleTracker.Models
 {
-    public class Faction
+    public class SubFaction
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int FactionId { get; set; }
+        public int SubFactionId { get; set; }
         [Required]
-        public string FactionName { get; set; }
+        public string SubFactionName { get; set; }
 
-        public List<GameFaction> GameFactions { get; set; }
         public List<FactionSubFaction> FactionSubFactions { get; set; }
+        public List<GameSubFaction> GameSubFactions { get; set; }
     }
 }
