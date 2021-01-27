@@ -72,6 +72,16 @@ namespace PDKBattleTracker.Controllers
 
             if (ModelState.IsValid)
             {
+
+                Player currentPlayer1 = new Player();
+                
+                currentPlayer1 = await _context.Players
+                    .FirstOrDefaultAsync(m => m.PlayerName == game.Player1Name);
+
+                var updatedScore = currentPlayer1.PlayerTotalScore + game.Player1Score;
+
+                currentPlayer1.PlayerTotalScore = updatedScore;
+
                 _context.Add(game);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
