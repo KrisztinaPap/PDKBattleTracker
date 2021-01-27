@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PDKBattleTracker.Models;
 
 namespace PDKBattleTracker.Migrations
 {
     [DbContext(typeof(PDKBattleTrackerContext))]
-    partial class PDKBattleTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210127012811_Jan26-04")]
+    partial class Jan2604
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,22 +32,18 @@ namespace PDKBattleTracker.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Player1Faction")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Player1Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Player1Score")
                         .HasColumnType("int");
 
                     b.Property<string>("Player2Faction")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Player2Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Player2Score")
@@ -85,7 +83,6 @@ namespace PDKBattleTracker.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("PlayerName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PlayerTotalScore")
