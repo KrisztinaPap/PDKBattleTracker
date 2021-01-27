@@ -72,7 +72,7 @@ namespace PDKBattleTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1Score,Player2Score,Winner")] Game game)
+        public async Task<IActionResult> Create([Bind("GameId,GameDate,Player1Name,Player2Name,Player1Faction,Player2Faction,Player1SubFaction, Player2SubFaction,Player1Score,Player2Score,Winner")] Game game)
         {
             ViewBag.PlayerList = GetPlayerlist();
             ViewBag.FactionList = GetFactionList();
