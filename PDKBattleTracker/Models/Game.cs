@@ -34,5 +34,8 @@ namespace PDKBattleTracker.Models
 
         public int PlayerId { get; set; }
         public List<GamePlayer> GamePlayers { get; set; }
+
+        public int FactionId { get; set; }
+        public List<GameFaction> GameFactions { get; set; }
     }
 }
