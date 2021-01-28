@@ -43,5 +43,8 @@ namespace PDKBattleTracker.Models
 
         public int SubFactionId { get; set; }
         public List<GameSubFaction> GameSubFactions { get; set; }
+
+        public int GameSizeId { get; set; }
+        public List<GameGameSize> GameGameSizes { get; set; }
     }
 }
