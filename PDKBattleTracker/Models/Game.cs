@@ -46,5 +46,8 @@ namespace PDKBattleTracker.Models
 
         public int GameSizeId { get; set; }
         public List<GameGameSize> GameGameSizes { get; set; }
+
+        public int MissionId { get; set; }
+        public List<GameMission> GameMissions { get; set; }
     }
 }

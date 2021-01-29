@@ -33,6 +33,7 @@ namespace PDKBattleTracker.Models
                 .WithMany(t => t.GamePlayers)
                 .HasForeignKey(pt => pt.PlayerId);
 
+          
             modelBuilder.Entity<GameFaction>()
                 .HasKey(t => new { t.GameId, t.FactionId });
 
@@ -46,6 +47,7 @@ namespace PDKBattleTracker.Models
                 .WithMany(t => t.GameFactions)
                 .HasForeignKey(pt => pt.FactionId);
 
+          
             modelBuilder.Entity<GameSubFaction>()
                .HasKey(t => new { t.GameId, t.SubFactionId });
 
@@ -59,6 +61,7 @@ namespace PDKBattleTracker.Models
                 .WithMany(t => t.GameSubFactions)
                 .HasForeignKey(pt => pt.SubFactionId);
 
+           
             modelBuilder.Entity<FactionSubFaction>()
               .HasKey(t => new { t.FactionId, t.SubFactionId });
 
@@ -72,6 +75,7 @@ namespace PDKBattleTracker.Models
                 .WithMany(t => t.FactionSubFactions)
                 .HasForeignKey(pt => pt.SubFactionId);
 
+            
             modelBuilder.Entity<GameGameSize>()
              .HasKey(t => new { t.GameId, t.GameSizeId });
 
@@ -84,6 +88,20 @@ namespace PDKBattleTracker.Models
                 .HasOne(pt => pt.GameSize)
                 .WithMany(t => t.GameGameSizes)
                 .HasForeignKey(pt => pt.GameSizeId);
+
+
+            modelBuilder.Entity<GameMission>()
+                .HasKey(t => new { t.GameId, t.MissionId });
+
+            modelBuilder.Entity<GameMission>()
+                .HasOne(pt => pt.Game)
+                .WithMany(p => p.GameMissions)
+                .HasForeignKey(pt => pt.GameId);
+
+            modelBuilder.Entity<GameMission>()
+                .HasOne(pt => pt.Mission)
+                .WithMany(t => t.GameMissions)
+                .HasForeignKey(pt => pt.MissionId);
         }
     }
 }
