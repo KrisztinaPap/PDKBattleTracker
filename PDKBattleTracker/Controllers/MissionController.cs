@@ -21,7 +21,7 @@ namespace PDKBattleTracker.Controllers
         // GET: Mission
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Mission.ToListAsync());
+            return View(await _context.Missions.ToListAsync());
         }
 
         // GET: Mission/Details/5
@@ -32,7 +32,7 @@ namespace PDKBattleTracker.Controllers
                 return NotFound();
             }
 
-            var mission = await _context.Mission
+            var mission = await _context.Missions
                 .FirstOrDefaultAsync(m => m.MissionId == id);
             if (mission == null)
             {
@@ -72,7 +72,7 @@ namespace PDKBattleTracker.Controllers
                 return NotFound();
             }
 
-            var mission = await _context.Mission.FindAsync(id);
+            var mission = await _context.Missions.FindAsync(id);
             if (mission == null)
             {
                 return NotFound();
@@ -123,7 +123,7 @@ namespace PDKBattleTracker.Controllers
                 return NotFound();
             }
 
-            var mission = await _context.Mission
+            var mission = await _context.Missions
                 .FirstOrDefaultAsync(m => m.MissionId == id);
             if (mission == null)
             {
@@ -138,15 +138,15 @@ namespace PDKBattleTracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var mission = await _context.Mission.FindAsync(id);
-            _context.Mission.Remove(mission);
+            var mission = await _context.Missions.FindAsync(id);
+            _context.Missions.Remove(mission);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool MissionExists(int id)
         {
-            return _context.Mission.Any(e => e.MissionId == id);
+            return _context.Missions.Any(e => e.MissionId == id);
         }
     }
 }

@@ -18,6 +18,8 @@ namespace PDKBattleTracker.Models
         public DbSet<Faction> Factions { get; set; }
         public DbSet<SubFaction> SubFactions { get; set; }
         public DbSet<GameSize> GameSizes { get; set; }
+        public DbSet<Mission> Missions { get; set; }
+        public DbSet<GameType> GameTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -103,8 +105,20 @@ namespace PDKBattleTracker.Models
                 .HasOne(pt => pt.Mission)
                 .WithMany(t => t.GameMissions)
                 .HasForeignKey(pt => pt.MissionId);
-        }
 
-        public DbSet<PDKBattleTracker.Models.Mission> Mission { get; set; }
+
+            modelBuilder.Entity<GameGameType>()
+               .HasKey(t => new { t.GameId, t.GameTypeId });
+
+            modelBuilder.Entity<GameGameType>()
+                .HasOne(pt => pt.Game)
+                .WithMany(p => p.GameGameTypes)
+                .HasForeignKey(pt => pt.GameId);
+
+            modelBuilder.Entity<GameGameType>()
+                .HasOne(pt => pt.GameType)
+                .WithMany(t => t.GameGameTypes)
+                .HasForeignKey(pt => pt.GameTypeId);
+        }
     }
 }
