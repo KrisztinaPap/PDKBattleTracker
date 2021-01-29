@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PDKBattleTracker.Models;
 
 namespace PDKBattleTracker.Models
 {
@@ -103,5 +104,7 @@ namespace PDKBattleTracker.Models
                 .WithMany(t => t.GameMissions)
                 .HasForeignKey(pt => pt.MissionId);
         }
+
+        public DbSet<PDKBattleTracker.Models.Mission> Mission { get; set; }
     }
 }
