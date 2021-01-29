@@ -20,6 +20,7 @@ namespace PDKBattleTracker.Models
         public DbSet<GameSize> GameSizes { get; set; }
         public DbSet<Mission> Missions { get; set; }
         public DbSet<GameType> GameTypes { get; set; }
+        public DbSet<GameSystem> GameSystems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -119,6 +120,20 @@ namespace PDKBattleTracker.Models
                 .HasOne(pt => pt.GameType)
                 .WithMany(t => t.GameGameTypes)
                 .HasForeignKey(pt => pt.GameTypeId);
+
+
+            modelBuilder.Entity<GameGameSystem>()
+           .HasKey(t => new { t.GameId, t.GameSystemId });
+
+            modelBuilder.Entity<GameGameSystem>()
+                .HasOne(pt => pt.Game)
+                .WithMany(p => p.GameGameSystems)
+                .HasForeignKey(pt => pt.GameId);
+
+            modelBuilder.Entity<GameGameSystem>()
+                .HasOne(pt => pt.GameSystem)
+                .WithMany(t => t.GameGameSystems)
+                .HasForeignKey(pt => pt.GameSystemId);
         }
     }
 }

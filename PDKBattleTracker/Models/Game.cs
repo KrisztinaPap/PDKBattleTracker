@@ -52,5 +52,8 @@ namespace PDKBattleTracker.Models
 
         public int GameTypeId { get; set; }
         public List<GameGameType> GameGameTypes { get; set; }
+
+        public int GameSystemId { get; set; }
+        public List<GameGameSystem> GameGameSystems { get; set; }
     }
 }
