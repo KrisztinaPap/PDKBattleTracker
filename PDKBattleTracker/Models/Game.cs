@@ -60,7 +60,10 @@ namespace PDKBattleTracker.Models
         public int Player1Secondary2Points { get; set; }
         public string Player1Secondary3 { get; set; }
         public int Player1Secondary3Points { get; set; }
-        public int Player1Score { get; set; }
+        public int Player1Score 
+        { 
+            get { return Player1PrimaryRound2Points + Player1PrimaryRound3Points + Player1PrimaryRound4Points + Player1PrimaryRound5Points + Player1Secondary1Points + Player1Secondary2Points + Player1Secondary3Points; } 
+        }
 
         // Player 2
 
@@ -81,7 +84,10 @@ namespace PDKBattleTracker.Models
         public int Player2Secondary2Points { get; set; }
         public string Player2Secondary3 { get; set; }
         public int Player2Secondary3Points { get; set; }
-        public int Player2Score { get; set; }
+        public int Player2Score
+        {
+            get { return Player2PrimaryRound2Points + Player2PrimaryRound3Points + Player2PrimaryRound4Points + Player2PrimaryRound5Points + Player2Secondary1Points + Player2Secondary2Points + Player2Secondary3Points; }
+        }
 
 
     }
