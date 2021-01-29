@@ -200,3 +200,8 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameType\Details.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameType\Edit.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameType\Index.cshtml.g.cs
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSystem\Create.cshtml.g.cs
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSystem\Delete.cshtml.g.cs
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSystem\Details.cshtml.g.cs
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSystem\Edit.cshtml.g.cs
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSystem\Index.cshtml.g.cs
