@@ -24,6 +24,7 @@ namespace PDKBattleTracker.Controllers
             ViewBag.GameSystemList = GetGameSystemList();
             ViewBag.GameTypeList = GetGameTypeList();
             ViewBag.GameSizeList = GetGameSizeList();
+            ViewBag.MissionList = GetMissionList();
 
             return View(await _context.Games.ToListAsync());
         }
@@ -237,5 +238,6 @@ namespace PDKBattleTracker.Controllers
 
         // Get Factions list for dropdown
 
+        // Get SubFaction list for dropdown
     }
 }
