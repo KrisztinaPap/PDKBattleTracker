@@ -21,6 +21,10 @@ namespace PDKBattleTracker.Controllers
         // GET: Game
         public async Task<IActionResult> Index()
         {
+            ViewBag.GameSystemList = GetGameSystemList();
+            ViewBag.GameTypeList = GetGameTypeList();
+            ViewBag.GameSizeList = GetGameSizeList();
+
             return View(await _context.Games.ToListAsync());
         }
 
@@ -148,5 +152,90 @@ namespace PDKBattleTracker.Controllers
         {
             return _context.Games.Any(e => e.GameId == id);
         }
+
+        // Get Game Systems list for dropdown
+        public IEnumerable<GameSystem> GetGameSystemList()
+        {
+            List<GameSystem> tempGameSystemList = new List<GameSystem>();
+
+            tempGameSystemList = (from gamesystem in _context.GameSystems select gamesystem).ToList();
+
+            List<GameSystem> gameSystemList = new List<GameSystem>();
+
+            foreach (GameSystem gameSystem in tempGameSystemList)
+            {
+                gameSystemList.Add(new GameSystem
+                {
+                    GameSystemId = Convert.ToInt32(gameSystem.GameSystemId),
+                    GameSystemName = gameSystem.GameSystemName.ToString()
+                });
+            }
+            return gameSystemList;
+        }
+
+        // Get Game Types list for dropdown
+        public IEnumerable<GameType> GetGameTypeList()
+        {
+            List<GameType> tempGameTypeList = new List<GameType>();
+
+            tempGameTypeList = (from gametype in _context.GameTypes select gametype).ToList();
+
+            List<GameType> gameTypeList = new List<GameType>();
+
+            foreach (GameType gameType in tempGameTypeList)
+            {
+                gameTypeList.Add(new GameType
+                {
+                    GameTypeId = Convert.ToInt32(gameType.GameTypeId),
+                    GameTypeName = gameType.GameTypeName.ToString()
+                });
+            }
+            return gameTypeList;
+        }
+
+        // Get Game Sizes list for dropdown
+        public IEnumerable<GameSize> GetGameSizeList()
+        {
+            List<GameSize> tempGameSizeList = new List<GameSize>();
+
+            tempGameSizeList = (from gamesize in _context.GameSizes select gamesize).ToList();
+
+            List<GameSize> gameSizeList = new List<GameSize>();
+
+            foreach (GameSize gameSize in tempGameSizeList)
+            {
+                gameSizeList.Add(new GameSize
+                {
+                    GameSizeId = Convert.ToInt32(gameSize.GameSizeId),
+                    GameSizeName = gameSize.GameSizeName.ToString()
+                });
+            }
+            return gameSizeList;
+        }
+
+        // Get Missions list for dropdown
+        public IEnumerable<Mission> GetMissionList()
+        {
+            List<Mission> tempMissionList = new List<Mission>();
+
+            tempMissionList = (from mission in _context.Missions select mission).ToList();
+
+            List<Mission> missionList = new List<Mission>();
+
+            foreach (Mission mission in tempMissionList)
+            {
+                missionList.Add(new Mission
+                {
+                    MissionId = Convert.ToInt32(mission.MissionId),
+                    MissionName = mission.MissionName.ToString()
+                });
+            }
+            return missionList;
+        }
+
+        // Get Players list for dropdown
+
+        // Get Factions list for dropdown
+
     }
 }
