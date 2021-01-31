@@ -27,6 +27,7 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
+            ViewBag.SubFactionList = GetSubFactionList();
 
             return View(await _context.Games.ToListAsync());
         }
@@ -279,5 +280,24 @@ namespace PDKBattleTracker.Controllers
 
 
         // Get SubFaction list for dropdown
+        public IEnumerable<SubFaction> GetSubFactionList()
+        {
+            List<SubFaction> tempSubFactionList = new List<SubFaction>();
+
+            tempSubFactionList = (from subfaction in _context.SubFactions select subfaction).ToList();
+
+            List<SubFaction> subFactionList = new List<SubFaction>();
+
+            foreach (SubFaction subfaction in tempSubFactionList)
+            {
+                subFactionList.Add(new SubFaction
+                {
+                    SubFactionId = Convert.ToInt32(subfaction.SubFactionId),
+                    SubFactionName = subfaction.SubFactionName.ToString()
+                });
+            }
+            return subFactionList;
+        }
+
     }
 }
