@@ -18,9 +18,12 @@
                 <span asp-validation-for="GameDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GameSystemId" class="control-label"></label>
-                <input asp-for="GameSystemId" class="form-control" />
-                <span asp-validation-for="GameSystemId" class="text-danger"></span>
+                <label asp-for="GameSystemId" class="control-label">Game System</label>
+                <div>
+                    <select id="GameSystemId" name="GameSystemId" asp-for="GameSystemId" asp-items="@(new SelectList(ViewBag.GameSystemList, "GameSystemId", "GameSystemName"))" class="form-control">
+                        <option value="0">--- select game system ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="GameTypeId" class="control-label"></label>
