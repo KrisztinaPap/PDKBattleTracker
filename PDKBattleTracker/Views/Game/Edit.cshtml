@@ -11,91 +11,101 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
+            <h3>Game Information</h3>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="GameId" />
             <div class="form-group">
                 <label asp-for="GameDate" class="control-label"></label>
                 <input asp-for="GameDate" class="form-control" />
                 <span asp-validation-for="GameDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GameSystemId" class="control-label"></label>
-                <input asp-for="GameSystemId" class="form-control" />
-                <span asp-validation-for="GameSystemId" class="text-danger"></span>
+                <label asp-for="GameSystemId" class="control-label">Game System</label>
+                <div>
+                    <select id="GameSystemId" name="GameSystemId" asp-for="GameSystemId" asp-items="@(new SelectList(ViewBag.GameSystemList, "GameSystemId", "GameSystemName"))" class="form-control">
+                        <option value="0">--- select game system ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
-                <label asp-for="GameTypeId" class="control-label"></label>
-                <input asp-for="GameTypeId" class="form-control" />
-                <span asp-validation-for="GameTypeId" class="text-danger"></span>
+                <label asp-for="GameTypeId" class="control-label">Game Type</label>
+                <div>
+                    <select id="GameTypeId" name="GameTypeId" asp-for="GameTypeId" asp-items="@(new SelectList(ViewBag.GameTypeList, "GameTypeId", "GameTypeName"))" class="form-control">
+                        <option value="0">--- select game type ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
-                <label asp-for="GameSizeId" class="control-label"></label>
-                <input asp-for="GameSizeId" class="form-control" />
-                <span asp-validation-for="GameSizeId" class="text-danger"></span>
+                <label asp-for="GameSizeId" class="control-label">Game Size</label>
+                <div>
+                    <select id="GameSizeId" name="GameSizeId" asp-for="GameSizeId" asp-items="@(new SelectList(ViewBag.GameSizeList, "GameSizeId", "GameSizeName"))" class="form-control">
+                        <option value="0">--- select game size ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
-                <label asp-for="MissionId" class="control-label"></label>
-                <input asp-for="MissionId" class="form-control" />
-                <span asp-validation-for="MissionId" class="text-danger"></span>
+                <label asp-for="MissionId" class="control-label">Game Mission</label>
+                <div>
+                    <select id="MissionId" name="MissionId" asp-for="MissionId" asp-items="@(new SelectList(ViewBag.MissionList, "MissionId", "MissionName"))" class="form-control">
+                        <option value="0">--- select game mission ---</option>
+                    </select>
+                </div>
             </div>
+            <h3>Player 1 Information</h3>
             <div class="form-group">
-                <label asp-for="PlayerId" class="control-label"></label>
-                <input asp-for="PlayerId" class="form-control" />
-                <span asp-validation-for="PlayerId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FactionId" class="control-label"></label>
-                <input asp-for="FactionId" class="form-control" />
-                <span asp-validation-for="FactionId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SubFactionId" class="control-label"></label>
-                <input asp-for="SubFactionId" class="form-control" />
-                <span asp-validation-for="SubFactionId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Player1Name" class="control-label"></label>
-                <input asp-for="Player1Name" class="form-control" />
-                <span asp-validation-for="Player1Name" class="text-danger"></span>
+                <label asp-for="Player1Name" class="control-label">Player 1</label>
+                <div>
+                    <select id="Player1Name" name="Player1Name" asp-for="Player1Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName"))" class="form-control">
+                        <option value="0">--- select player 1 ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Player1Faction" class="control-label"></label>
-                <input asp-for="Player1Faction" class="form-control" />
-                <span asp-validation-for="Player1Faction" class="text-danger"></span>
+                <div>
+                    <select id="Player1Faction" name="Player1Faction" asp-for="Player1Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionId", "FactionName"))" class="form-control">
+                        <option value="0">--- select faction ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Player1SubFaction" class="control-label"></label>
-                <input asp-for="Player1SubFaction" class="form-control" />
-                <span asp-validation-for="Player1SubFaction" class="text-danger"></span>
+                <div>
+                    <select id="Player1SubFaction" name="Player1SubFaction" asp-for="Player1SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionId", "SubFactionName"))" class="form-control">
+                        <option value="0">--- select subfaction ---</option>
+                    </select>
+                </div>
             </div>
+
             <div class="form-group">
-                <label asp-for="Player1Custom1" class="control-label"></label>
+                <label asp-for="Player1Custom1" class="control-label">Custom 1 (optional)</label>
                 <input asp-for="Player1Custom1" class="form-control" />
                 <span asp-validation-for="Player1Custom1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Player1Custom2" class="control-label"></label>
+                <label asp-for="Player1Custom2" class="control-label">Custom 2 (optional)</label>
                 <input asp-for="Player1Custom2" class="form-control" />
                 <span asp-validation-for="Player1Custom2" class="text-danger"></span>
             </div>
+
+            <h3>Scoring</h3>
             <div class="form-group">
                 <label asp-for="Player1PrimaryRound2Points" class="control-label"></label>
-                <input asp-for="Player1PrimaryRound2Points" class="form-control" />
+                <input asp-for="Player1PrimaryRound2Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1PrimaryRound2Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player1PrimaryRound3Points" class="control-label"></label>
-                <input asp-for="Player1PrimaryRound3Points" class="form-control" />
+                <input asp-for="Player1PrimaryRound3Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1PrimaryRound3Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player1PrimaryRound4Points" class="control-label"></label>
-                <input asp-for="Player1PrimaryRound4Points" class="form-control" />
+                <input asp-for="Player1PrimaryRound4Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1PrimaryRound4Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player1PrimaryRound5Points" class="control-label"></label>
-                <input asp-for="Player1PrimaryRound5Points" class="form-control" />
+                <input asp-for="Player1PrimaryRound5Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1PrimaryRound5Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -105,7 +115,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player1Secondary1Points" class="control-label"></label>
-                <input asp-for="Player1Secondary1Points" class="form-control" />
+                <input asp-for="Player1Secondary1Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1Secondary1Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -115,7 +125,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player1Secondary2Points" class="control-label"></label>
-                <input asp-for="Player1Secondary2Points" class="form-control" />
+                <input asp-for="Player1Secondary2Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1Secondary2Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -125,52 +135,63 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player1Secondary3Points" class="control-label"></label>
-                <input asp-for="Player1Secondary3Points" class="form-control" />
+                <input asp-for="Player1Secondary3Points" value="0" class="form-control" />
                 <span asp-validation-for="Player1Secondary3Points" class="text-danger"></span>
             </div>
+            <h3>Player 2 Information</h3>
             <div class="form-group">
-                <label asp-for="Player2Name" class="control-label"></label>
-                <input asp-for="Player2Name" class="form-control" />
-                <span asp-validation-for="Player2Name" class="text-danger"></span>
+                <label asp-for="Player2Name" class="control-label">Player 2</label>
+                <div>
+                    <select id="Player2Name" name="Player2Name" asp-for="Player2Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName"))" class="form-control">
+                        <option value="0">--- select player 2 ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Player2Faction" class="control-label"></label>
-                <input asp-for="Player2Faction" class="form-control" />
-                <span asp-validation-for="Player2Faction" class="text-danger"></span>
+                <div>
+                    <select id="Player2Faction" name="Player2Faction" asp-for="Player2Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionId", "FactionName"))" class="form-control">
+                        <option value="0">--- select faction ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Player2SubFaction" class="control-label"></label>
-                <input asp-for="Player2SubFaction" class="form-control" />
-                <span asp-validation-for="Player2SubFaction" class="text-danger"></span>
+                <div>
+                    <select id="Player2SubFaction" name="Player2SubFaction" asp-for="Player2SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionId", "SubFactionName"))" class="form-control">
+                        <option value="0">--- select subfaction ---</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
-                <label asp-for="Player2Custom1" class="control-label"></label>
+                <label asp-for="Player2Custom1" class="control-label">Custom 1 (optional)</label>
                 <input asp-for="Player2Custom1" class="form-control" />
                 <span asp-validation-for="Player2Custom1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Player2Custom2" class="control-label"></label>
+                <label asp-for="Player2Custom2" class="control-label">Custom 2 (optional)</label>
                 <input asp-for="Player2Custom2" class="form-control" />
                 <span asp-validation-for="Player2Custom2" class="text-danger"></span>
             </div>
+            <h3>Scoring</h3>
             <div class="form-group">
                 <label asp-for="Player2PrimaryRound2Points" class="control-label"></label>
-                <input asp-for="Player2PrimaryRound2Points" class="form-control" />
+                <input asp-for="Player2PrimaryRound2Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2PrimaryRound2Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player2PrimaryRound3Points" class="control-label"></label>
-                <input asp-for="Player2PrimaryRound3Points" class="form-control" />
+                <input asp-for="Player2PrimaryRound3Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2PrimaryRound3Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player2PrimaryRound4Points" class="control-label"></label>
-                <input asp-for="Player2PrimaryRound4Points" class="form-control" />
+                <input asp-for="Player2PrimaryRound4Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2PrimaryRound4Points" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Player2PrimaryRound5Points" class="control-label"></label>
-                <input asp-for="Player2PrimaryRound5Points" class="form-control" />
+                <input asp-for="Player2PrimaryRound5Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2PrimaryRound5Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -180,7 +201,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player2Secondary1Points" class="control-label"></label>
-                <input asp-for="Player2Secondary1Points" class="form-control" />
+                <input asp-for="Player2Secondary1Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2Secondary1Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -190,7 +211,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player2Secondary2Points" class="control-label"></label>
-                <input asp-for="Player2Secondary2Points" class="form-control" />
+                <input asp-for="Player2Secondary2Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2Secondary2Points" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -200,7 +221,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Player2Secondary3Points" class="control-label"></label>
-                <input asp-for="Player2Secondary3Points" class="form-control" />
+                <input asp-for="Player2Secondary3Points" value="0" class="form-control" />
                 <span asp-validation-for="Player2Secondary3Points" class="text-danger"></span>
             </div>
             <div class="form-group">
