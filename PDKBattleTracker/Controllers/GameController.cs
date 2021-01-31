@@ -25,6 +25,7 @@ namespace PDKBattleTracker.Controllers
             ViewBag.GameTypeList = GetGameTypeList();
             ViewBag.GameSizeList = GetGameSizeList();
             ViewBag.MissionList = GetMissionList();
+            ViewBag.PlayerList = GetPlayerList();
 
             return View(await _context.Games.ToListAsync());
         }
@@ -235,6 +236,25 @@ namespace PDKBattleTracker.Controllers
         }
 
         // Get Players list for dropdown
+        public IEnumerable<Player> GetPlayerList()
+        {
+            List<Player> tempPlayerList = new List<Player>();
+
+            tempPlayerList = (from player in _context.Players select player).ToList();
+
+            List<Player> playerList = new List<Player>();
+
+            foreach (Player player in tempPlayerList)
+            {
+                playerList.Add(new Player
+                {
+                    PlayerId = Convert.ToInt32(player.PlayerId),
+                    PlayerName = player.PlayerName.ToString()
+                });
+            }
+            return playerList;
+        }
+
 
         // Get Factions list for dropdown
 
