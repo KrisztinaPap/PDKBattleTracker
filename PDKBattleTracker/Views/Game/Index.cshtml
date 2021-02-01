@@ -9,7 +9,61 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.GameDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Player1Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Player1Faction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Player2Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Player2Faction)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player1Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player1Faction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player2Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player2Faction)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.GameId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.GameId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.GameId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -238,4 +292,4 @@
         </tr>
 }
     </tbody>
-</table>
+</table>*@

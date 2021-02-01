@@ -54,7 +54,7 @@
             <div class="form-group">
                 <label asp-for="Player1Name" class="control-label">Player 1</label>
                 <div>
-                    <select id="Player1Name" name="Player1Name" asp-for="Player1Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName"))" class="form-control">
+                    <select id="Player1Name" name="Player1Name" asp-for="Player1Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerName", "PlayerName"))" class="form-control">
                         <option value="0">--- select player 1 ---</option>
                     </select>
                 </div>
@@ -62,7 +62,7 @@
             <div class="form-group">
                 <label asp-for="Player1Faction" class="control-label"></label>
                 <div>
-                    <select id="Player1Faction" name="Player1Faction" asp-for="Player1Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionId", "FactionName"))" class="form-control">
+                    <select id="Player1Faction" name="Player1Faction" asp-for="Player1Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionName", "FactionName"))" class="form-control">
                         <option value="0">--- select faction ---</option>
                     </select>
                 </div>
@@ -70,7 +70,7 @@
             <div class="form-group">
                 <label asp-for="Player1SubFaction" class="control-label"></label>
                 <div>
-                    <select id="Player1SubFaction" name="Player1SubFaction" asp-for="Player1SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionId", "SubFactionName"))" class="form-control">
+                    <select id="Player1SubFaction" name="Player1SubFaction" asp-for="Player1SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionName", "SubFactionName"))" class="form-control">
                         <option value="0">--- select subfaction ---</option>
                     </select>
                 </div>
@@ -142,7 +142,7 @@
             <div class="form-group">
                 <label asp-for="Player2Name" class="control-label">Player 2</label>
                 <div>
-                    <select id="Player2Name" name="Player2Name" asp-for="Player2Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerId", "PlayerName"))" class="form-control">
+                    <select id="Player2Name" name="Player2Name" asp-for="Player2Name" asp-items="@(new SelectList(ViewBag.PlayerList, "PlayerName", "PlayerName"))" class="form-control">
                         <option value="0">--- select player 2 ---</option>
                     </select>
                 </div>
@@ -150,7 +150,7 @@
             <div class="form-group">
                 <label asp-for="Player2Faction" class="control-label"></label>
                 <div>
-                    <select id="Player2Faction" name="Player2Faction" asp-for="Player2Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionId", "FactionName"))" class="form-control">
+                    <select id="Player2Faction" name="Player2Faction" asp-for="Player2Faction" asp-items="@(new SelectList(ViewBag.FactionList, "FactionName", "FactionName"))" class="form-control">
                         <option value="0">--- select faction ---</option>
                     </select>
                 </div>
@@ -158,7 +158,7 @@
             <div class="form-group">
                 <label asp-for="Player2SubFaction" class="control-label"></label>
                 <div>
-                    <select id="Player2SubFaction" name="Player2SubFaction" asp-for="Player2SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionId", "SubFactionName"))" class="form-control">
+                    <select id="Player2SubFaction" name="Player2SubFaction" asp-for="Player2SubFaction" asp-items="@(new SelectList(ViewBag.SubFactionList, "SubFactionName", "SubFactionName"))" class="form-control">
                         <option value="0">--- select subfaction ---</option>
                     </select>
                 </div>
