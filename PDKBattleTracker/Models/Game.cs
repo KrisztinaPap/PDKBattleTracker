@@ -20,6 +20,7 @@ namespace PDKBattleTracker.Models
         public DateTime GameDate { get; set; }
 
         public int GameSystemId { get; set; }
+        public string GameSystemName { get; set; }
         public List<GameGameSystem> GameGameSystems { get; set; }
 
         public int GameTypeId { get; set; }
