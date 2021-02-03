@@ -41,6 +41,21 @@ namespace PDKBattleTracker.Models
         public int SubFactionId { get; set; }
         public List<GameSubFaction> GameSubFactions { get; set; }
 
+        public string Winner 
+        {
+            get {
+                if (Player1Score > Player2Score)
+                {
+                    return Player1Name;
+                }
+                else if (Player2Score > Player1Score)
+                {
+                    return Player2Name;
+                }
+                else return "Tie"; 
+            }
+        }
+
 
         // Player 1
 
