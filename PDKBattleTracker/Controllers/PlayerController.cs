@@ -148,5 +148,23 @@ namespace PDKBattleTracker.Controllers
         {
             return _context.Players.Any(e => e.PlayerId == id);
         }
+
+        public int GetNumberOfWins(string player)
+        {
+            List<string> namesOfWinners = new List<string>();
+
+            namesOfWinners = (from winners in _context.Games select winners.Winner).ToList();
+
+            var numberOfWins = 0;
+
+            for (int i = 0; i < namesOfWinners.Count(); i++)
+            {
+                if (namesOfWinners[i] == player)
+                {
+                    numberOfWins++; 
+                }
+            }
+            return numberOfWins;
+        }
     }
 }

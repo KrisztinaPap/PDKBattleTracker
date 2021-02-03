@@ -17,7 +17,6 @@ namespace PDKBattleTracker.Models
         [Required]
         public string PlayerName { get; set; }
         public int PlayerTotalScore { get; set; }
-        public int NumberOfWins { get; set; }
 
         public List<GamePlayer> GamePlayers { get; set; }
     }
