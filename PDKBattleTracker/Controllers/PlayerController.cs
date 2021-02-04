@@ -161,7 +161,7 @@ namespace PDKBattleTracker.Controllers
 
             for (int i = 0; i < namesOfWinners.Count(); i++)
             {
-                if (namesOfWinners[i] == )
+                if (namesOfWinners[i] == player.ToString())
                 {
                     numberOfWins++; 
                 }
