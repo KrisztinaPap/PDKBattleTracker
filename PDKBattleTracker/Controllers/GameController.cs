@@ -42,6 +42,9 @@ namespace PDKBattleTracker.Controllers
 
             var game = await _context.Games
                 .FirstOrDefaultAsync(m => m.GameId == id);
+
+            ViewBag.CurrentGameSystemName = GetSpecificGameSystemName(id);
+
             if (game == null)
             {
                 return NotFound();
@@ -327,6 +330,14 @@ namespace PDKBattleTracker.Controllers
                 });
             }
             return subFactionList;
+        }
+
+        // Get Current Game info
+        public string GetSpecificGameSystemName(int? id)
+        {
+            var currentGameSystemName = _context.GameSystems.Where(m => m.GameSystemId == id).Select(m => m.GameSystemName).ToString();
+
+            return currentGameSystemName;
         }
 
     }
