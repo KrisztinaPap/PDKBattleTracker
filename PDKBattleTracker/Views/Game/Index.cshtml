@@ -9,79 +9,80 @@
 <p>
     <a asp-action="Create">Add New Game</a>
 </p>
+<div class="table-responsive">
+    <table class="table table-dark table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.GameDate)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player1Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player1Faction)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player1Score)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player2Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player2Faction)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Player2Score)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Winner)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.IsCompleted)
+                </th>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GameDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player1Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player1Faction)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player1Score)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player2Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player2Faction)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Player2Score)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Winner)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsCompleted)
-            </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GameDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player1Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player1Faction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player1Score)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player2Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player2Faction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player2Score)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Winner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsCompleted)
+                    </td>
 
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player1Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player1Faction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player1Score)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player2Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player2Faction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player2Score)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Winner)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCompleted)
-            </td>
-
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.GameId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.GameId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.GameId">Delete</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.GameId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.GameId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.GameId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
