@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-
+       
         <div class="row">
             <div class="col-lg-6">
 
@@ -102,57 +102,62 @@
                     <span asp-validation-for="Player1Custom2" class="text-danger"></span>
                 </div>
 
-                <h2>Scoring</h2>
-                <div class="form-group">
-                    <label asp-for="Player1PrimaryRound2Points" class="control-label"></label>
-                    <input asp-for="Player1PrimaryRound2Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1PrimaryRound2Points" class="text-danger"></span>
+               
+
+                <div class="scoringArea">
+                    <div class="form-group">
+                        <label asp-for="Player1PrimaryRound2Points" class="control-label"></label>
+                        <input asp-for="Player1PrimaryRound2Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1PrimaryRound2Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1PrimaryRound3Points" class="control-label"></label>
+                        <input asp-for="Player1PrimaryRound3Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1PrimaryRound3Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1PrimaryRound4Points" class="control-label"></label>
+                        <input asp-for="Player1PrimaryRound4Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1PrimaryRound4Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1PrimaryRound5Points" class="control-label"></label>
+                        <input asp-for="Player1PrimaryRound5Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1PrimaryRound5Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary1text" class="control-label"></label>
+                        <input asp-for="Player1Secondary1text" class="form-control" />
+                        <span asp-validation-for="Player1Secondary1text" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary1Points" class="control-label"></label>
+                        <input asp-for="Player1Secondary1Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1Secondary1Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary2" class="control-label"></label>
+                        <input asp-for="Player1Secondary2" class="form-control" />
+                        <span asp-validation-for="Player1Secondary2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary2Points" class="control-label"></label>
+                        <input asp-for="Player1Secondary2Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1Secondary2Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary3" class="control-label"></label>
+                        <input asp-for="Player1Secondary3" class="form-control" />
+                        <span asp-validation-for="Player1Secondary3" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player1Secondary3Points" class="control-label"></label>
+                        <input asp-for="Player1Secondary3Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player1Secondary3Points" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Player1PrimaryRound3Points" class="control-label"></label>
-                    <input asp-for="Player1PrimaryRound3Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1PrimaryRound3Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1PrimaryRound4Points" class="control-label"></label>
-                    <input asp-for="Player1PrimaryRound4Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1PrimaryRound4Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1PrimaryRound5Points" class="control-label"></label>
-                    <input asp-for="Player1PrimaryRound5Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1PrimaryRound5Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary1text" class="control-label"></label>
-                    <input asp-for="Player1Secondary1text" class="form-control" />
-                    <span asp-validation-for="Player1Secondary1text" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary1Points" class="control-label"></label>
-                    <input asp-for="Player1Secondary1Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1Secondary1Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary2" class="control-label"></label>
-                    <input asp-for="Player1Secondary2" class="form-control" />
-                    <span asp-validation-for="Player1Secondary2" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary2Points" class="control-label"></label>
-                    <input asp-for="Player1Secondary2Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1Secondary2Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary3" class="control-label"></label>
-                    <input asp-for="Player1Secondary3" class="form-control" />
-                    <span asp-validation-for="Player1Secondary3" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player1Secondary3Points" class="control-label"></label>
-                    <input asp-for="Player1Secondary3Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player1Secondary3Points" class="text-danger"></span>
-                </div>
+
+
             </div>
             <div class="col-lg-6">
                 <h2>Player 2 Information</h2>
@@ -190,57 +195,68 @@
                     <input asp-for="Player2Custom2" class="form-control" />
                     <span asp-validation-for="Player2Custom2" class="text-danger"></span>
                 </div>
-                <h2>Scoring</h2>
-                <div class="form-group">
-                    <label asp-for="Player2PrimaryRound2Points" class="control-label"></label>
-                    <input asp-for="Player2PrimaryRound2Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2PrimaryRound2Points" class="text-danger"></span>
+
+
+
+                <div class="scoringArea">
+                    <div class="form-group">
+                        <label asp-for="Player2PrimaryRound2Points" class="control-label"></label>
+                        <input asp-for="Player2PrimaryRound2Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2PrimaryRound2Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2PrimaryRound3Points" class="control-label"></label>
+                        <input asp-for="Player2PrimaryRound3Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2PrimaryRound3Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2PrimaryRound4Points" class="control-label"></label>
+                        <input asp-for="Player2PrimaryRound4Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2PrimaryRound4Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2PrimaryRound5Points" class="control-label"></label>
+                        <input asp-for="Player2PrimaryRound5Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2PrimaryRound5Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary1text" class="control-label"></label>
+                        <input asp-for="Player2Secondary1text" class="form-control" />
+                        <span asp-validation-for="Player2Secondary1text" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary1Points" class="control-label"></label>
+                        <input asp-for="Player2Secondary1Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2Secondary1Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary2" class="control-label"></label>
+                        <input asp-for="Player2Secondary2" class="form-control" />
+                        <span asp-validation-for="Player2Secondary2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary2Points" class="control-label"></label>
+                        <input asp-for="Player2Secondary2Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2Secondary2Points" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary3" class="control-label"></label>
+                        <input asp-for="Player2Secondary3" class="form-control" />
+                        <span asp-validation-for="Player2Secondary3" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Player2Secondary3Points" class="control-label"></label>
+                        <input asp-for="Player2Secondary3Points" value="0" class="form-control" />
+                        <span asp-validation-for="Player2Secondary3Points" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Player2PrimaryRound3Points" class="control-label"></label>
-                    <input asp-for="Player2PrimaryRound3Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2PrimaryRound3Points" class="text-danger"></span>
+
+                <div>
+                    <button id="scoringButton" class="btn btn-primary" type="button">
+                        Toggle Scoring Area
+                    </button>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Player2PrimaryRound4Points" class="control-label"></label>
-                    <input asp-for="Player2PrimaryRound4Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2PrimaryRound4Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2PrimaryRound5Points" class="control-label"></label>
-                    <input asp-for="Player2PrimaryRound5Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2PrimaryRound5Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary1text" class="control-label"></label>
-                    <input asp-for="Player2Secondary1text" class="form-control" />
-                    <span asp-validation-for="Player2Secondary1text" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary1Points" class="control-label"></label>
-                    <input asp-for="Player2Secondary1Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2Secondary1Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary2" class="control-label"></label>
-                    <input asp-for="Player2Secondary2" class="form-control" />
-                    <span asp-validation-for="Player2Secondary2" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary2Points" class="control-label"></label>
-                    <input asp-for="Player2Secondary2Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2Secondary2Points" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary3" class="control-label"></label>
-                    <input asp-for="Player2Secondary3" class="form-control" />
-                    <span asp-validation-for="Player2Secondary3" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Player2Secondary3Points" class="control-label"></label>
-                    <input asp-for="Player2Secondary3Points" value="0" class="form-control" />
-                    <span asp-validation-for="Player2Secondary3Points" class="text-danger"></span>
-                </div>
+
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>
