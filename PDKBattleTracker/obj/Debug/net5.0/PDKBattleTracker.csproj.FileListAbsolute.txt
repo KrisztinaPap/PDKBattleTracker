@@ -23,8 +23,6 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\scopedcss\b
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.TagHelpers.input.cache
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.TagHelpers.output.cache
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.RazorCoreGenerate.cache
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -206,4 +204,3 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Game\Edit.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Game\Index.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Home\Admin.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Home\NewGame.cshtml.g.cs

@@ -19,28 +19,38 @@ namespace PDKBattleTracker.Models
         [Display( Name = "Game Date" )]
         public DateTime GameDate { get; set; }
 
+        [Display(Name = "Game System ID")]
         public int GameSystemId { get; set; }
+
+        [Display(Name = "Game System Name")]
         public string GameSystemName { get; set; }
         public List<GameGameSystem> GameGameSystems { get; set; }
 
+        [Display(Name = "Game Type ID")]
         public int GameTypeId { get; set; }
         public List<GameGameType> GameGameTypes { get; set; }
 
+        [Display(Name = "Game Size ID")]
         public int GameSizeId { get; set; }
         public List<GameGameSize> GameGameSizes { get; set; }
 
+        [Display(Name = "Game Mission ID")]
         public int MissionId { get; set; }
         public List<GameMission> GameMissions { get; set; }
 
+        [Display(Name = "Player ID")]
         public int PlayerId { get; set; }
         public List<GamePlayer> GamePlayers { get; set; }
 
+        [Display(Name = "Faction ID")]
         public int FactionId { get; set; }
         public List<GameFaction> GameFactions { get; set; }
 
+        [Display(Name = "Subfaction ID")]
         public int SubFactionId { get; set; }
         public List<GameSubFaction> GameSubFactions { get; set; }
 
+        [Display(Name = "Winner")]
         public string Winner 
         {
             get {
@@ -56,13 +66,18 @@ namespace PDKBattleTracker.Models
             }
         }
 
+        [Display(Name = "Completed")]
+        public bool IsCompleted { get; set; }
 
         // Player 1
 
         [Required]
+        [Display(Name = "Player 1")]
         public string Player1Name { get; set; }
         [Required]
+        [Display(Name = "Player 1 Faction")]
         public string Player1Faction { get; set; }
+        [Display(Name = "Player 1 Subfaction")]
         public string Player1SubFaction { get; set; }
         public string Player1Custom1 { get; set; }
         public string Player1Custom2 { get; set; }
