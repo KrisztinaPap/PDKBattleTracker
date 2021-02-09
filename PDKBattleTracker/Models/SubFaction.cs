@@ -11,8 +11,11 @@ namespace PDKBattleTracker.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Subfaction ID")]
         public int SubFactionId { get; set; }
+
         [Required]
+        [Display(Name = "Subfaction")]
         public string SubFactionName { get; set; }
 
         public List<FactionSubFaction> FactionSubFactions { get; set; }

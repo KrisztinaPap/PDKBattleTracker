@@ -11,9 +11,11 @@ namespace PDKBattleTracker.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Mission ID")]
         public int MissionId { get; set; }
 
         [Required]
+        [Display(Name = "Mission")]
         public string MissionName { get; set; }
 
         public List<GameMission> GameMissions { get; set; }

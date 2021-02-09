@@ -11,9 +11,11 @@ namespace PDKBattleTracker.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Game Size ID")]
         public int GameSizeId { get; set; }
 
         [Required]
+        [Display(Name = "Game Size")]
         public string GameSizeName { get; set; }
 
         public List<GameGameSize>GameGameSizes { get; set; }

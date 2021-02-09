@@ -10,10 +10,12 @@ namespace PDKBattleTracker.Models
     public class GameSystem
     {
         [Key]
+        [Display(Name = "Game System ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int GameSystemId { get; set; }
 
         [Required]
+        [Display(Name = "Game System")]
         public string GameSystemName { get; set; }
 
         public List<GameGameSystem> GameGameSystems { get; set; }

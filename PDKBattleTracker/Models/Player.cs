@@ -12,10 +12,14 @@ namespace PDKBattleTracker.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Player ID")]
         public int PlayerId { get; set; }
 
         [Required]
+        [Display(Name = "Player")]
         public string PlayerName { get; set; }
+
+        [Display(Name = "Player Total Score")]
         public int PlayerTotalScore { get; set; }
 
         public List<GamePlayer> GamePlayers { get; set; }
