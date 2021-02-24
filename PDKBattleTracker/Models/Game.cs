@@ -66,8 +66,6 @@ namespace PDKBattleTracker.Models
             }
         }
 
-        [Display(Name = "Completed")]
-        public bool IsCompleted { get; set; }
 
         // Player 1
 

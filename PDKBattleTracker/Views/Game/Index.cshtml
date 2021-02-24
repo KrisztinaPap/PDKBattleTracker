@@ -17,28 +17,19 @@
                     @Html.DisplayNameFor(model => model.GameDate)
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player1Name)
+                    Player 1
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player1Faction)
+                    Score
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player1Score)
+                    Player 2
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player2Name)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player2Faction)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Player2Score)
+                    Score
                 </th>
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Winner)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.IsCompleted)
                 </th>
 
                 <th></th>
@@ -52,18 +43,14 @@
                         @Html.DisplayFor(modelItem => item.GameDate)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Player1Name)
-                    </td>
-                    <td>
+                        @Html.DisplayFor(modelItem => item.Player1Name),
                         @Html.DisplayFor(modelItem => item.Player1Faction)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Player1Score)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Player2Name)
-                    </td>
-                    <td>
+                        @Html.DisplayFor(modelItem => item.Player2Name),
                         @Html.DisplayFor(modelItem => item.Player2Faction)
                     </td>
                     <td>
@@ -71,9 +58,6 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Winner)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsCompleted)
                     </td>
 
                     <td>
