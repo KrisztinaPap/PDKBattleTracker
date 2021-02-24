@@ -3,11 +3,14 @@
     ViewData["Admin"] = "Admin Page";
 }
 <h2>Admin Areas</h2>
-<p>@Html.ActionLink("Games", "Index", "Game")</p>
-<p>@Html.ActionLink("Game Sizes", "Index", "GameSize")</p>
-<p>@Html.ActionLink("Game Types", "Index", "GameType")</p>
-<p>@Html.ActionLink("Game Systems", "Index", "GameSystem")</p>
-<p>@Html.ActionLink("Missions", "Index", "Mission")</p>
-<p>@Html.ActionLink("Players", "Index", "Player")</p>
-<p>@Html.ActionLink("Factions", "Index", "Faction")</p>
-<p>@Html.ActionLink("SubFactions", "Index", "SubFaction")</p>
+<div class="list-group">
+    <p class="list-group-item">@Html.ActionLink("Games", "Index", "Game")</p>
+    <p class="list-group-item">@Html.ActionLink("Game Sizes", "Index", "GameSize")</p>
+    <p class="list-group-item">@Html.ActionLink("Game Types", "Index", "GameType")</p>
+    <p class="list-group-item">@Html.ActionLink("Game Systems", "Index", "GameSystem")</p>
+    <p class="list-group-item">@Html.ActionLink("Missions", "Index", "Mission")</p>
+    <p class="list-group-item">@Html.ActionLink("Players", "Index", "Player")</p>
+    <p class="list-group-item">@Html.ActionLink("Factions", "Index", "Faction")</p>
+    <p class="list-group-item">@Html.ActionLink("SubFactions", "Index", "SubFaction")</p>
+</div>
+

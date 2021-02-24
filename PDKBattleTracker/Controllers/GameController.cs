@@ -29,7 +29,11 @@ namespace PDKBattleTracker.Controllers
             ViewBag.FactionList = GetFactionList();
             ViewBag.SubFactionList = GetSubFactionList();
 
-            return View(await _context.Games.ToListAsync());
+            List<Game> gameList = new List<Game>();
+            gameList = _context.Games.ToList();
+            gameList.Sort((d1, d2) => DateTime.Compare(d2.GameDate, d1.GameDate));
+
+            return View(gameList);
         }
 
         // GET: Game/Details/5
