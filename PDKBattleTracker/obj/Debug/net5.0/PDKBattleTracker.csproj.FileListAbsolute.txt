@@ -9,7 +9,6 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\ref\PDKBatt
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\PDKBattleTracker.pdb
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\PDKBattleTracker.Views.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\PDKBattleTracker.Views.pdb
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.csprojAssemblyReference.cache
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.GeneratedMSBuildEditorConfig.editorconfig
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.AssemblyInfoInputs.cache
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.AssemblyInfo.cs
