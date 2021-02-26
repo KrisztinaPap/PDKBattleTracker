@@ -10,7 +10,7 @@
     <a asp-action="Create">Add New Game</a>
 </p>
 <div class="table-responsive">
-    <table class="table table-dark table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th scope="col">
@@ -43,16 +43,16 @@
                         @Html.DisplayFor(modelItem => item.GameDate)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Player1Name),
-                        @Html.DisplayFor(modelItem => item.Player1Faction)
+                        @Html.DisplayFor(modelItem => item.Player1Name)
+                        <p class="small font-italic pb-0 mb-0">@Html.DisplayFor(modelItem => item.Player1Faction)</p>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Player1Score)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Player2Name),
-                        @Html.DisplayFor(modelItem => item.Player2Faction)
-                    </td>
+                        @Html.DisplayFor(modelItem => item.Player2Name)
+                        <p class="small font-italic pb-0 mb-0">@Html.DisplayFor(modelItem => item.Player2Faction)</p>
+</td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Player2Score)
                     </td>
