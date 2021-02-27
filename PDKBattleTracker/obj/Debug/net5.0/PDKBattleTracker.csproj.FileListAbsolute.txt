@@ -172,11 +172,6 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Faction\Details.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Faction\Edit.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Faction\Index.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\SubFaction\Create.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\SubFaction\Delete.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\SubFaction\Details.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\SubFaction\Edit.cshtml.g.cs
-C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\SubFaction\Index.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSize\Create.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSize\Delete.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\GameSize\Details.cshtml.g.cs

@@ -27,7 +27,6 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
-            ViewBag.SubFactionList = GetSubFactionList();
 
             List<Game> gameList = new List<Game>();
             gameList = _context.Games.ToList();
@@ -66,7 +65,6 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
-            ViewBag.SubFactionList = GetSubFactionList();
 
             return View();
         }
@@ -83,7 +81,6 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
-            ViewBag.SubFactionList = GetSubFactionList();
 
             if (ModelState.IsValid)
             {
@@ -103,7 +100,6 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
-            ViewBag.SubFactionList = GetSubFactionList();
 
             if (id == null)
             {
@@ -130,7 +126,6 @@ namespace PDKBattleTracker.Controllers
             ViewBag.MissionList = GetMissionList();
             ViewBag.PlayerList = GetPlayerList();
             ViewBag.FactionList = GetFactionList();
-            ViewBag.SubFactionList = GetSubFactionList();
 
             if (id != game.GameId)
             {
@@ -315,26 +310,6 @@ namespace PDKBattleTracker.Controllers
             return factionList;
         }
 
-
-        // Get SubFaction list for dropdown
-        public IEnumerable<SubFaction> GetSubFactionList()
-        {
-            List<SubFaction> tempSubFactionList = new List<SubFaction>();
-
-            tempSubFactionList = (from subfaction in _context.SubFactions select subfaction).ToList();
-
-            List<SubFaction> subFactionList = new List<SubFaction>();
-
-            foreach (SubFaction subfaction in tempSubFactionList)
-            {
-                subFactionList.Add(new SubFaction
-                {
-                    SubFactionId = Convert.ToInt32(subfaction.SubFactionId),
-                    SubFactionName = subfaction.SubFactionName.ToString()
-                });
-            }
-            return subFactionList;
-        }
 
         // Get Current Game info
         public string GetSpecificGameSystemName(int? id)

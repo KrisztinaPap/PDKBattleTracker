@@ -18,6 +18,5 @@ namespace PDKBattleTracker.Models
         public string FactionName { get; set; }
 
         public List<GameFaction> GameFactions { get; set; }
-        public List<FactionSubFaction> FactionSubFactions { get; set; }
     }
 }

@@ -46,9 +46,7 @@ namespace PDKBattleTracker.Models
         public int FactionId { get; set; }
         public List<GameFaction> GameFactions { get; set; }
 
-        [Display(Name = "Subfaction ID")]
-        public int SubFactionId { get; set; }
-        public List<GameSubFaction> GameSubFactions { get; set; }
+       
 
         [Display(Name = "Winner")]
         public string Winner 
