@@ -85,36 +85,44 @@ namespace PDKBattleTracker.Models
         public string Player1Custom2 { get; set; }
 
         [Display(Name = "Round 2")]
+        [Range(0, 15)]
         public int Player1PrimaryRound2Points { get; set; }
 
         [Display(Name = "Round 3")]
+        [Range(0, 15)]
         public int Player1PrimaryRound3Points { get; set; }
 
         [Display(Name = "Round 4")]
+        [Range(0, 15)]
         public int Player1PrimaryRound4Points { get; set; }
 
         [Display(Name = "Round 5")]
+        [Range(0, 15)]
         public int Player1PrimaryRound5Points { get; set; }
 
         [Display(Name = "Secondary #1 (optional)")]
         public string Player1Secondary1text { get; set; }
 
         [Display(Name = "Secondary #1 Points")]
+        [Range(0, 15)]
         public int Player1Secondary1Points { get; set; }
 
         [Display(Name = "Secondary #2 (optional)")]
         public string Player1Secondary2 { get; set; }
 
         [Display(Name = "Secondary #2 Points")]
+        [Range(0, 15)]
         public int Player1Secondary2Points { get; set; }
 
         [Display(Name = "Secondary #3 (optional)")]
         public string Player1Secondary3 { get; set; }
 
         [Display(Name = "Secondary #3 Points")]
+        [Range(0, 15)]
         public int Player1Secondary3Points { get; set; }
 
         [Display(Name = "Total Game Score")]
+        [Range(0, 100)]
         public int Player1Score 
         { 
             get { return Player1PrimaryRound2Points + Player1PrimaryRound3Points + Player1PrimaryRound4Points + Player1PrimaryRound5Points + Player1Secondary1Points + Player1Secondary2Points + Player1Secondary3Points; } 
@@ -140,36 +148,44 @@ namespace PDKBattleTracker.Models
         public string Player2Custom2 { get; set; }
 
         [Display(Name = "Round 2")]
+        [Range(0, 15)]
         public int Player2PrimaryRound2Points { get; set; }
 
         [Display(Name = "Round 3")]
+        [Range(0, 15)]
         public int Player2PrimaryRound3Points { get; set; }
 
         [Display(Name = "Round 4")]
+        [Range(0, 15)]
         public int Player2PrimaryRound4Points { get; set; }
 
         [Display(Name = "Round 5")]
+        [Range(0, 15)]
         public int Player2PrimaryRound5Points { get; set; }
 
         [Display(Name = "Secondary #1 (optional)")]
         public string Player2Secondary1text { get; set; }
 
         [Display(Name = "Secondary #1 Points")]
+        [Range(0, 15)]
         public int Player2Secondary1Points { get; set; }
 
         [Display(Name = "Secondary #2 (optional)")]
         public string Player2Secondary2 { get; set; }
 
         [Display(Name = "Secondary #2 Points")]
+        [Range(0, 15)]
         public int Player2Secondary2Points { get; set; }
 
         [Display(Name = "Secondary #3 (optional)")]
         public string Player2Secondary3 { get; set; }
 
         [Display(Name = "Secondary #3 Points")]
+        [Range(0, 15)]
         public int Player2Secondary3Points { get; set; }
 
         [Display(Name = "Total Game Score")]
+        [Range(0, 100)]
         public int Player2Score
         {
             get { return Player2PrimaryRound2Points + Player2PrimaryRound3Points + Player2PrimaryRound4Points + Player2PrimaryRound5Points + Player2Secondary1Points + Player2Secondary2Points + Player2Secondary3Points; }

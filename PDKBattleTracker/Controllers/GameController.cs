@@ -19,7 +19,7 @@ namespace PDKBattleTracker.Controllers
         }
 
         // GET: Game
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             ViewBag.GameSystemList = GetGameSystemList();
             ViewBag.GameTypeList = GetGameTypeList();
@@ -73,7 +73,7 @@ namespace PDKBattleTracker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GameId,GameDate,GameSystemId,GameSystemName,GameTypeId,GameSizeId,MissionId,IsCompleted,PlayerId,FactionId,SubFactionId,Player1Name,Player1Faction,Player1SubFaction,Player1Custom1,Player1Custom2,Player1PrimaryRound2Points,Player1PrimaryRound3Points,Player1PrimaryRound4Points,Player1PrimaryRound5Points,Player1Secondary1text,Player1Secondary1Points,Player1Secondary2,Player1Secondary2Points,Player1Secondary3,Player1Secondary3Points,Player2Name,Player2Faction,Player2SubFaction,Player2Custom1,Player2Custom2,Player2PrimaryRound2Points,Player2PrimaryRound3Points,Player2PrimaryRound4Points,Player2PrimaryRound5Points,Player2Secondary1text,Player2Secondary1Points,Player2Secondary2,Player2Secondary2Points,Player2Secondary3,Player2Secondary3Points")] Game game)
+        public async Task<IActionResult> Create([Bind("GameId,GameDate,GameSystemId,GameSystemName,GameTypeId,GameSizeId,MissionId,PlayerId,FactionId,Player1Name,Player1Faction,Player1SubFaction,Player1Custom1,Player1Custom2,Player1PrimaryRound2Points,Player1PrimaryRound3Points,Player1PrimaryRound4Points,Player1PrimaryRound5Points,Player1Secondary1text,Player1Secondary1Points,Player1Secondary2,Player1Secondary2Points,Player1Secondary3,Player1Secondary3Points,Player2Name,Player2Faction,Player2SubFaction,Player2Custom1,Player2Custom2,Player2PrimaryRound2Points,Player2PrimaryRound3Points,Player2PrimaryRound4Points,Player2PrimaryRound5Points,Player2Secondary1text,Player2Secondary1Points,Player2Secondary2,Player2Secondary2Points,Player2Secondary3,Player2Secondary3Points")] Game game)
         {
             ViewBag.GameSystemList = GetGameSystemList();
             ViewBag.GameTypeList = GetGameTypeList();
@@ -118,7 +118,7 @@ namespace PDKBattleTracker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GameId,GameDate,GameSystemId,GameSystemName,GameTypeId,GameSizeId,MissionId,IsCompleted,PlayerId,FactionId,SubFactionId,Player1Name,Player1Faction,Player1SubFaction,Player1Custom1,Player1Custom2,Player1PrimaryRound2Points,Player1PrimaryRound3Points,Player1PrimaryRound4Points,Player1PrimaryRound5Points,Player1Secondary1text,Player1Secondary1Points,Player1Secondary2,Player1Secondary2Points,Player1Secondary3,Player1Secondary3Points,Player2Name,Player2Faction,Player2SubFaction,Player2Custom1,Player2Custom2,Player2PrimaryRound2Points,Player2PrimaryRound3Points,Player2PrimaryRound4Points,Player2PrimaryRound5Points,Player2Secondary1text,Player2Secondary1Points,Player2Secondary2,Player2Secondary2Points,Player2Secondary3,Player2Secondary3Points")] Game game)
+        public IActionResult Edit(int id, [Bind("GameId,GameDate,GameSystemId,GameSystemName,GameTypeId,GameSizeId,MissionId,PlayerId,FactionId,Player1Name,Player1Faction,Player1SubFaction,Player1Custom1,Player1Custom2,Player1PrimaryRound2Points,Player1PrimaryRound3Points,Player1PrimaryRound4Points,Player1PrimaryRound5Points,Player1Secondary1text,Player1Secondary1Points,Player1Secondary2,Player1Secondary2Points,Player1Secondary3,Player1Secondary3Points,Player2Name,Player2Faction,Player2SubFaction,Player2Custom1,Player2Custom2,Player2PrimaryRound2Points,Player2PrimaryRound3Points,Player2PrimaryRound4Points,Player2PrimaryRound5Points,Player2Secondary1text,Player2Secondary1Points,Player2Secondary2,Player2Secondary2Points,Player2Secondary3,Player2Secondary3Points")] Game game)
         {
             ViewBag.GameSystemList = GetGameSystemList();
             ViewBag.GameTypeList = GetGameTypeList();
@@ -137,7 +137,7 @@ namespace PDKBattleTracker.Controllers
                 try
                 {
                     _context.Update(game);
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
