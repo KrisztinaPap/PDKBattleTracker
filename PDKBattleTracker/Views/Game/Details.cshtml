@@ -4,204 +4,268 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Game Details</h1>
 
-<div>
-    <h4>Game</h4>
-    <hr />
-    <div class="row">
-        <div class="col-lg-6">
-            <dl class="row">
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Name)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Name)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Faction)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Faction)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1SubFaction)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1SubFaction)
-                </dd>
 
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Custom1)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Custom1)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Custom2)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Custom2)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1PrimaryRound2Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1PrimaryRound2Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1PrimaryRound3Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1PrimaryRound3Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1PrimaryRound4Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1PrimaryRound4Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1PrimaryRound5Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1PrimaryRound5Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary1text)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary1text)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary1Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary1Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary2)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary2)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary2Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary2Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary3)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary3)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player1Secondary3Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player1Secondary3Points)
-                </dd>
-            </dl>
-        </div>
-        <div class="col-lg-6">
-            <dl class="row">
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Name)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Name)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Faction)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Faction)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2SubFaction)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2SubFaction)
-                </dd>
+<div class="d-lg-flex">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        Player 1
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1Faction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1Faction)
+                    </td>
+                </tr>
+                @if (!String.IsNullOrEmpty(Model.Player1SubFaction))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1SubFaction)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1SubFaction)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player1Custom1))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1Custom1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1Custom1)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player1Custom2))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1Custom2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1Custom2)
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1PrimaryRound2Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1PrimaryRound2Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1PrimaryRound3Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1PrimaryRound3Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1PrimaryRound4Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1PrimaryRound4Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player1PrimaryRound5Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player1PrimaryRound5Points)
+                    </td>
+                </tr>
+                @if (!String.IsNullOrEmpty(Model.Player1Secondary1text) && Model.Player1Secondary1text.ToString() != "Secondary #1 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1Secondary1text)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1Secondary1Points)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player1Secondary2) && Model.Player1Secondary2.ToString() != "Secondary #2 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1Secondary2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1Secondary2Points)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player1Secondary3) && Model.Player1Secondary3.ToString() != "Secondary #3 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player1Secondary3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player1Secondary3Points)
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Custom1)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Custom1)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Custom2)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Custom2)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2PrimaryRound2Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2PrimaryRound2Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2PrimaryRound3Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2PrimaryRound3Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2PrimaryRound4Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2PrimaryRound4Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2PrimaryRound5Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2PrimaryRound5Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary1text)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary1text)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary1Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary1Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary2)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary2)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary2Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary2Points)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary3)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary3)
-                </dd>
-                <dt class="col-sm-6">
-                    @Html.DisplayNameFor(model => model.Player2Secondary3Points)
-                </dt>
-                <dd class="col-sm-6">
-                    @Html.DisplayFor(model => model.Player2Secondary3Points)
-                </dd>
-            </dl>
-        </div>
+        </table>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        Player 2
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2Faction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2Faction)
+                    </td>
+                </tr>
+                @if (!String.IsNullOrEmpty(Model.Player2SubFaction))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2SubFaction)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2SubFaction)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player2Custom1))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2Custom1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2Custom1)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player2Custom2))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2Custom2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2Custom2)
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2PrimaryRound2Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2PrimaryRound2Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2PrimaryRound3Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2PrimaryRound3Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2PrimaryRound4Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2PrimaryRound4Points)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Player2PrimaryRound5Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Player2PrimaryRound5Points)
+                    </td>
+                </tr>
+                @if (!String.IsNullOrEmpty(Model.Player2Secondary1text) && Model.Player2Secondary1text.ToString() != "Secondary #1 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2Secondary1text)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2Secondary1Points)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player2Secondary2) && Model.Player2Secondary2.ToString() != "Secondary #2 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2Secondary2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2Secondary2Points)
+                        </td>
+                    </tr>
+                }
+                @if (!String.IsNullOrEmpty(Model.Player2Secondary3) && Model.Player2Secondary3.ToString() != "Secondary #3 (optional)")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Player2Secondary3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Player2Secondary3Points)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
     </div>
 </div>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model.GameId">Edit</a> |
     <a asp-action="Index">Back to List</a>
