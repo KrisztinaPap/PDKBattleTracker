@@ -68,53 +68,53 @@ namespace PDKBattleTracker.Models
         // Player 1
 
         [Required]
-        [Display(Name = "Player 1")]
+        [Display(Name = "Name")]
         public string Player1Name { get; set; }
 
         [Required]
-        [Display(Name = "Player 1 Faction")]
+        [Display(Name = "Faction")]
         public string Player1Faction { get; set; }
 
-        [Display(Name = "Player 1 Subfaction")]
+        [Display(Name = "Subfaction (optional)")]
         public string Player1SubFaction { get; set; }
 
-        [Display(Name = "Player 1 Custom #1")]
+        [Display(Name = "Custom #1 (optional)")]
         public string Player1Custom1 { get; set; }
 
-        [Display(Name = "Player 1 Custom #2")]
+        [Display(Name = "Custom #2 (optional)")]
         public string Player1Custom2 { get; set; }
 
-        [Display(Name = "Player 1 - Primary R2 Points")]
+        [Display(Name = "Round 2")]
         public int Player1PrimaryRound2Points { get; set; }
 
-        [Display(Name = "Player 1 - Primary R3 Points")]
+        [Display(Name = "Round 3")]
         public int Player1PrimaryRound3Points { get; set; }
 
-        [Display(Name = "Player 1 - Primary R4 Points")]
+        [Display(Name = "Round 4")]
         public int Player1PrimaryRound4Points { get; set; }
 
-        [Display(Name = "Player 1 - Primary R5 Points")]
+        [Display(Name = "Round 5")]
         public int Player1PrimaryRound5Points { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #1")]
+        [Display(Name = "Secondary #1 (optional)")]
         public string Player1Secondary1text { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #1 Points")]
+        [Display(Name = "Secondary #1 Points")]
         public int Player1Secondary1Points { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #2")]
+        [Display(Name = "Secondary #2 (optional)")]
         public string Player1Secondary2 { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #2 Points")]
+        [Display(Name = "Secondary #2 Points")]
         public int Player1Secondary2Points { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #3")]
+        [Display(Name = "Secondary #3 (optional)")]
         public string Player1Secondary3 { get; set; }
 
-        [Display(Name = "Player 1 - Secondary #3 Points")]
+        [Display(Name = "Secondary #3 Points")]
         public int Player1Secondary3Points { get; set; }
 
-        [Display(Name = "Player 1 Total Game Score")]
+        [Display(Name = "Total Game Score")]
         public int Player1Score 
         { 
             get { return Player1PrimaryRound2Points + Player1PrimaryRound3Points + Player1PrimaryRound4Points + Player1PrimaryRound5Points + Player1Secondary1Points + Player1Secondary2Points + Player1Secondary3Points; } 
@@ -123,53 +123,53 @@ namespace PDKBattleTracker.Models
         // Player 2
 
         [Required]
-        [Display(Name = "Player 2")]
+        [Display(Name = "Name")]
         public string Player2Name { get; set; }
 
         [Required]
-        [Display(Name = "Player 2 Faction")]
+        [Display(Name = "Faction")]
         public string Player2Faction { get; set; }
 
-        [Display(Name = "Player 2 Subfaction")]
+        [Display(Name = "Subfaction (optional)")]
         public string Player2SubFaction { get; set; }
 
-        [Display(Name = "Player 2 Custom #1")]
+        [Display(Name = "Custom #1 (optional)")]
         public string Player2Custom1 { get; set; }
 
-        [Display(Name = "Player 2 Custom #2")]
+        [Display(Name = "Custom #2 (optional)")]
         public string Player2Custom2 { get; set; }
 
-        [Display(Name = "Player 2 - Primary R2 Points")]
+        [Display(Name = "Round 2")]
         public int Player2PrimaryRound2Points { get; set; }
 
-        [Display(Name = "Player 2 - Primary R3 Points")]
+        [Display(Name = "Round 3")]
         public int Player2PrimaryRound3Points { get; set; }
 
-        [Display(Name = "Player 2 - Primary R4 Points")]
+        [Display(Name = "Round 4")]
         public int Player2PrimaryRound4Points { get; set; }
 
-        [Display(Name = "Player 2 - Primary R5 Points")]
+        [Display(Name = "Round 5")]
         public int Player2PrimaryRound5Points { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #1")]
+        [Display(Name = "Secondary #1 (optional)")]
         public string Player2Secondary1text { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #1 Points")]
+        [Display(Name = "Secondary #1 Points")]
         public int Player2Secondary1Points { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #2")]
+        [Display(Name = "Secondary #2 (optional)")]
         public string Player2Secondary2 { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #2 Points")]
+        [Display(Name = "Secondary #2 Points")]
         public int Player2Secondary2Points { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #3")]
+        [Display(Name = "Secondary #3 (optional)")]
         public string Player2Secondary3 { get; set; }
 
-        [Display(Name = "Player 2 - Secondary #3 Points")]
+        [Display(Name = "Secondary #3 Points")]
         public int Player2Secondary3Points { get; set; }
 
-        [Display(Name = "Player 1 Total Game Score")]
+        [Display(Name = "Total Game Score")]
         public int Player2Score
         {
             get { return Player2PrimaryRound2Points + Player2PrimaryRound3Points + Player2PrimaryRound4Points + Player2PrimaryRound5Points + Player2Secondary1Points + Player2Secondary2Points + Player2Secondary3Points; }
