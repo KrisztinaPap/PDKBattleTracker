@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUlgcL9bUvkS2b7z5EeS0AgAAAAACAAAAAAAQZgAAAAEAACAAAAChO837+nirjOCl88b/9IUVHZ+jKuHJLoGPsOqM+2NPUwAAAAAOgAAAAAIAACAAAACeD33UhevEqv2jLZSBNWaYDCXsAHbCg6676zozm35JCIAAAAAN78kwx9REPCGUzUCas+ak0qPyxWT7d0uS9hiUmp8FwL2hx5BBElRS0dfWdq48SQyI+2BeXxkBpRmLIpl2uSr8q34I0oX+mgJLyt0kY8wMwEmF99CCt606N1hH6IVxs1OIRnMW57vaUt2+PpmiQ3NEhAQn0g2I0thEzTan0QrVm0AAAACD1BIY2+J7E2HjBUBNyPUlUJayYd5whung7uiCj5anYQyPyX4A6EMZSi0IdWrdsqw9ekVNH4SgDzxGaA5PPZjv</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="PDKBattleTrackerContext">
+      <Value>Data Source=tcp:krisztina-azure-resume-db.database.windows.net,1433%3bInitial Catalog=krisztina-azure-sql-db%3bUser Id=krisztina%2499!%40krisztina-azure-resume-db%3bPassword=2&amp;5!%24ab`</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="PDKBattleTracker.Models.PDKBattleTrackerContext">
+      <Value>Data Source=tcp:krisztina-azure-resume-db.database.windows.net,1433%3bInitial Catalog=krisztina-azure-sql-db%3bUser Id=krisztina%2499!%40krisztina-azure-resume-db%3bPassword=2&amp;5!%24ab`</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

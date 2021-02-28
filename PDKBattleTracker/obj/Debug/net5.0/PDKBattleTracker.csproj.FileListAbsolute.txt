@@ -199,3 +199,8 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Game\Index.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\Razor\Views\Home\Admin.cshtml.g.cs
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Debug\net5.0\PDKBattleTracker.csprojAssemblyReference.cache
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\Azure.Core.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\Azure.Identity.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\Azure.Security.KeyVault.Secrets.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Debug\net5.0\Microsoft.Identity.Client.Extensions.Msal.dll
