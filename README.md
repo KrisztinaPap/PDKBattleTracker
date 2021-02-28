@@ -4,3 +4,9 @@ This ASP.NET Core web app is a side project for [https://www.pocketsdk.org/](Poc
 ## Author
 Krisztina Pap
 
+## Tech/Features
+- ASP.NET Core
+- C#
+- MVC
+- Entity Framework
+- Hosted on Microsoft Azure as an App Service with an SQL database
