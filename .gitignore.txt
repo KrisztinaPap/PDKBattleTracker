@@ -33,7 +33,8 @@ obj/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -446,3 +447,7 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,visualstudio,visualstudiocode,dotnetcore
+
+# .exe file
+PDKBattleTracker/obj/Release/net5.0/win-x64/PubTmp/Out/PDKBattleTracker.exe
+PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\PDKBattleTracker.exe
