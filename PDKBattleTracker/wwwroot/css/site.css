@@ -78,4 +78,6 @@ body {
     display: none;
 }
 
-
+.tall-row {
+    height: 90px;
+}

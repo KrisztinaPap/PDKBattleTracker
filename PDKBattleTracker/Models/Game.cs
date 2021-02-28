@@ -75,7 +75,7 @@ namespace PDKBattleTracker.Models
         [Display(Name = "Faction")]
         public string Player1Faction { get; set; }
 
-        [Display(Name = "Subfaction (optional)")]
+        [Display(Name = "Subfaction")]
         public string Player1SubFaction { get; set; }
 
         [Display(Name = "Custom #1 (optional)")]
@@ -138,7 +138,7 @@ namespace PDKBattleTracker.Models
         [Display(Name = "Faction")]
         public string Player2Faction { get; set; }
 
-        [Display(Name = "Subfaction (optional)")]
+        [Display(Name = "Subfaction")]
         public string Player2SubFaction { get; set; }
 
         [Display(Name = "Custom #1 (optional)")]
