@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ByLDLfOiftcMh+Gj/dkALiKXh1KL62qfkLuyYEX539HmfGRygnIcq6DR5duPRx4NQFSUSQp9s6FK1BtNXkYnGQ==",
+  "dgSpecHash": "deEvN1v3PBw9iJNUEjOxnSjwM3jVKCyN3k4+/VMybzTQnMSqW+6NolsGyADw1n5AOB4wT3OIQ5PiCB1o6v9pZw==",
   "success": true,
   "projectFilePath": "C:\\Code\\ASPDOTNET\\PDKBattleTracker\\PDKBattleTracker\\PDKBattleTracker.csproj",
   "expectedPackageFiles": [
@@ -69,7 +69,7 @@
     "C:\\Users\\krisz\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.1\\microsoft.visualstudio.web.codegenerators.mvc.5.0.1.nupkg.sha512",
     "C:\\Users\\krisz\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\krisz\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\krisz\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\krisz\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\krisz\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\krisz\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",

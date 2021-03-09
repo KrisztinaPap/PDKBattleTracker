@@ -15,7 +15,7 @@ namespace PDKBattleTracker.Models
         public int GameTypeId { get; set; }
 
         [Required]
-        [Display(Name = "Game Type ID")]
+        [Display(Name = "Game Type")]
         public string GameTypeName { get; set; }
 
         public List<GameGameType> GameGameTypes { get; set; }
