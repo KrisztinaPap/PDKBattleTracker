@@ -204,3 +204,8 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Azure.Ext
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Azure.Identity.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Azure.Security.KeyVault.Secrets.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\bin\Release\net5.0\Microsoft.Extensions.Identity.Stores.dll
