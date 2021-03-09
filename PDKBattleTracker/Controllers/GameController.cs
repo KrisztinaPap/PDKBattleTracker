@@ -256,6 +256,8 @@ namespace PDKBattleTracker.Controllers
 
             tempMissionList = (from mission in _context.Missions select mission).ToList();
 
+            tempMissionList = tempMissionList.OrderBy(o => o.MissionName).ToList();
+
             List<Mission> missionList = new List<Mission>();
 
             foreach (Mission mission in tempMissionList)
@@ -275,6 +277,8 @@ namespace PDKBattleTracker.Controllers
             List<Player> tempPlayerList = new List<Player>();
 
             tempPlayerList = (from player in _context.Players select player).ToList();
+
+            tempPlayerList = tempPlayerList.OrderBy(o => o.PlayerName).ToList();
 
             List<Player> playerList = new List<Player>();
 
@@ -297,6 +301,8 @@ namespace PDKBattleTracker.Controllers
 
             tempFactionList = (from faction in _context.Factions select faction).ToList();
 
+            tempFactionList = tempFactionList.OrderBy(o => o.FactionName).ToList();
+
             List<Faction> factionList = new List<Faction>();
 
             foreach (Faction faction in tempFactionList)
@@ -307,6 +313,7 @@ namespace PDKBattleTracker.Controllers
                     FactionName = faction.FactionName.ToString()
                 });
             }
+         
             return factionList;
         }
 
