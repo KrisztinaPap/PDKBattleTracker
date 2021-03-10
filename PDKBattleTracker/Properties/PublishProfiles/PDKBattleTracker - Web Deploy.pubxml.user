@@ -7,6 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUlgcL9bUvkS2b7z5EeS0AgAAAAACAAAAAAAQZgAAAAEAACAAAAChO837+nirjOCl88b/9IUVHZ+jKuHJLoGPsOqM+2NPUwAAAAAOgAAAAAIAACAAAACeD33UhevEqv2jLZSBNWaYDCXsAHbCg6676zozm35JCIAAAAAN78kwx9REPCGUzUCas+ak0qPyxWT7d0uS9hiUmp8FwL2hx5BBElRS0dfWdq48SQyI+2BeXxkBpRmLIpl2uSr8q34I0oX+mgJLyt0kY8wMwEmF99CCt606N1hH6IVxs1OIRnMW57vaUt2+PpmiQ3NEhAQn0g2I0thEzTan0QrVm0AAAACD1BIY2+J7E2HjBUBNyPUlUJayYd5whung7uiCj5anYQyPyX4A6EMZSi0IdWrdsqw9ekVNH4SgDzxGaA5PPZjv</EncryptedPassword>
+    <History>True|2021-03-09T22:59:59.4806509Z;</History>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="PDKBattleTrackerContext">

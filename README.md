@@ -8,5 +8,5 @@ Krisztina Pap
 - ASP.NET Core
 - C#
 - MVC
-- Entity Framework
+- Entity Framework - Just because I wanted to see if I could :)
 - Hosted on Microsoft Azure as an App Service with an SQL database

@@ -45,6 +45,9 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Ou
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Azure.Identity.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Azure.Security.KeyVault.Secrets.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Humanizer.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.dll
@@ -62,6 +65,8 @@ C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Ou
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
+C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Code\ASPDOTNET\PDKBattleTracker\PDKBattleTracker\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
