@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PDKBattleTracker.Models;
 using System;
@@ -17,6 +18,7 @@ namespace PDKBattleTracker.Controllers
         {
             _logger = logger;
         }
+        [Authorize]
 
         public IActionResult Index()
         {
